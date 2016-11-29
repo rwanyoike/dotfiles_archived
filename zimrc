@@ -1,0 +1,14 @@
+# ZIM settings
+zmodules=('directory' 'environment' 'fasd' 'git' \
+          'history' 'input' 'prompt' \
+          'spectrum' 'utility' 'syntax-highlighting' \
+          'history-substring-search' 'completion')
+
+# Utility settings
+zcorrection='true'
+
+# Highlighting settings
+zhighlighters=('main' 'brackets' 'cursor' 'line')
+
+# Prompt settings
+zprompt_theme='steeef'

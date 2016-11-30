@@ -1,6 +1,5 @@
 # ZIM settings
-zmodules=('directory' 'environment' 'fasd' 'git' \
-          'history' 'input' 'prompt' \
+zmodules=('directory' 'environment' 'fasd' 'git' 'history' 'input' 'prompt' \
           'spectrum' 'utility' 'syntax-highlighting' \
           'history-substring-search' 'completion')
 

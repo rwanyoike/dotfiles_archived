@@ -1,9 +1,9 @@
 [core]
-  autocrlf = false
-  excludesfile = ~/.gitignore
+	autocrlf = false
+	excludesfile = ~/.gitignore
 [push]
-  # 'git push' will push the current branch to its tracking branch the usual
-  # default is to push all branches
-  default = upstream
+	# 'git push' will push the current branch to its tracking branch the usual
+	# default is to push all branches
+	default = upstream
 [include]
-  path = ~/.gitconfig.user
+	path = ~/.gitconfig.user

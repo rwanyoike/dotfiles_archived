@@ -4,11 +4,11 @@ Set zsh as your login shell:
 
     $ chsh -s $(which zsh)
 
-# Initial Setup
+## Initial Setup
 
 First, clone the repo onto your device:
 
-    $ git clone git@github.com:rwanyoike/dotfiles.git ~/dotfiles
+    $ git clone git@github.com:rwanyoike/dotfiles.git ~/.dotfiles
 
 Install [rcm](https://github.com/thoughtbot/rcm) (rc file [dotfile] management):
 
@@ -25,7 +25,7 @@ Install [rcm](https://github.com/thoughtbot/rcm) (rc file [dotfile] management):
 
 [https://github.com/thoughtbot/rcm#installation](https://github.com/thoughtbot/rcm#installation)
 
-# Link Dotfiles
+## Link Dotfiles
 
 Install the dotfiles:
 
@@ -43,24 +43,45 @@ You can safely run `rcup` multiple times to update:
 
 You should run `rcup` after pulling a new version of the repository to symlink any new files in the repository.
 
-# $HOME sweet ~/
+## $HOME sweet ~/
 
-[nvm](https://github.com/creationix/nvm) - Node version management:
+### Node Version Management
 
-    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+[nvm](https://github.com/creationix/nvm):
 
-[pyenv](https://github.com/yyuu/pyenv) - Python version management:
+    $ git clone https://github.com/creationix/nvm ~/.nvm
 
-    $ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+### Python Version Management
 
-[rvm](https://github.com/rvm/rvm) - Ruby version management:
+[pyenv](https://github.com/yyuu/pyenv):
 
-    $ \curl -sSL https://get.rvm.io | bash -s stable
+    $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+    $ git clone https://github.com/yyuu/pyenv-doctor.git ~/.pyenv/plugins/pyenv-doctor
+    $ git clone https://github.com/yyuu/pyenv-installer.git ~/.pyenv/plugins/pyenv-installer
+    $ git clone https://github.com/yyuu/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+    $ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+    $ git clone https://github.com/yyuu/pyenv-which-ext.git ~/.pyenv/plugins/pyenv-which-ext
 
-[spacemacs](https://github.com/syl20bnr/spacemacs) - A community-driven Emacs distribution:
+To update, run `pyenv update`.
+
+### Ruby Version Management
+
+[rvm](https://github.com/rvm/rvm):
+
+    $ curl -sSL https://get.rvm.io | bash -s stable
+
+To update, run `rvm get stable`.
+
+### Emacs Distribution
+
+[spacemacs](https://github.com/syl20bnr/spacemacs):
 
     $ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
-[zplug](https://github.com/zplug/zplug) - A next-generation plugin manager for zsh:
+### Zsh Plugin Manager
 
-    $ curl -sL zplug.sh/installer | zsh
+[zplug](https://github.com/zplug/zplug):
+
+    $ git clone https://github.com/zplug/zplug ~/.zplug
+
+To update, run `zplug update`.

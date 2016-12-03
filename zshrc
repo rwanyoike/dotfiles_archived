@@ -8,6 +8,9 @@ zplug "sorin-ionescu/prezto", \
 # Help remembering aliases
 zplug "djui/alias-tips"
 
+# k is the new l, yo
+zplug "supercrabtree/k"
+
 # Manage local plugins
 zplug "~/.zsh", from:local
 

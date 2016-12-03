@@ -21,7 +21,7 @@ zplug "eriner/zim", \
 
 # Install available plugins
 if ! zplug check; then
-    printf "Install? (y/N): "
+    printf "Install Zsh plugins? (y/N): "
     if read -q; then
         echo; zplug install
     fi

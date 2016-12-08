@@ -48,6 +48,11 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# Sublime Text ----------------------------------------------------------------
+
+*.sublime-project
+*.sublime-workspace
+
 # Visual Studio Code ----------------------------------------------------------
 
 .vscode

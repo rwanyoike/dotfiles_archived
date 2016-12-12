@@ -4,13 +4,13 @@ Set zsh as your login shell:
 
     $ chsh -s $(which zsh)
 
-## Initial Setup
+## Initial setup
 
-First, clone the repo onto your device:
+Clone the repo onto your device:
 
-    $ git clone git@github.com:rwanyoike/dotfiles.git ~/.dotfiles
+    $ git clone https://github.com/rwanyoike/dotfiles ~/.dotfiles
 
-Install [rcm](https://github.com/thoughtbot/rcm) (rc file [dotfile] management):
+Install [rcm](https://github.com/thoughtbot/rcm) (rc file management):
 
 **Arch Linux:**
 
@@ -21,11 +21,16 @@ Install [rcm](https://github.com/thoughtbot/rcm) (rc file [dotfile] management):
     $ brew tap thoughtbot/formulae
     $ brew install rcm
 
+**Debian:**
+
+    $ wget https://thoughtbot.github.io/rcm/debs/rcm_1.3.0-1_all.deb
+    $ sudo dpkg -i rcm_1.3.0-1_all.deb
+
 **Other OS:**
 
 [https://github.com/thoughtbot/rcm#installation](https://github.com/thoughtbot/rcm#installation)
 
-## Link Dotfiles
+## Link dotfiles
 
 Install the dotfiles:
 
@@ -45,13 +50,15 @@ You should run `rcup` after pulling a new version of the repository to symlink a
 
 ## $HOME sweet ~/
 
-### Node Version Management
+Tools that live in my home directory:
+
+### Node version management
 
 [nvm](https://github.com/creationix/nvm):
 
     $ git clone https://github.com/creationix/nvm ~/.nvm
 
-### Python Version Management
+### Python version management
 
 [pyenv](https://github.com/yyuu/pyenv):
 
@@ -64,7 +71,7 @@ You should run `rcup` after pulling a new version of the repository to symlink a
 
 To update, run `pyenv update`.
 
-### Ruby Version Management
+### Ruby version management
 
 [rvm](https://github.com/rvm/rvm):
 
@@ -72,13 +79,13 @@ To update, run `pyenv update`.
 
 To update, run `rvm get stable`.
 
-### Emacs Distribution
+### Emacs distribution
 
 [spacemacs](https://github.com/syl20bnr/spacemacs):
 
     $ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
-### Zsh Plugin Manager
+### Zsh plugin manager
 
 [zplug](https://github.com/zplug/zplug):
 

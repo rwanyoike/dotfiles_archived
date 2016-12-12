@@ -9,6 +9,6 @@ export VISUAL='vim'
 export PAGER='less'
 
 # Language
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
+if [[ -z "$LC_ALL" ]]; then
+  export LC_ALL='en_US.UTF-8'
 fi

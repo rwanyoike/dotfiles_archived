@@ -2,7 +2,7 @@ source ~/.zplug/init.zsh
 
 # Configuration framework
 prezto_modules=('node' 'python' 'ruby')
-zplug "sorin-ionescu/prezto", \
+zplug "zsh-users/prezto", \
     use:"modules/{${(j:,:)prezto_modules}}/init.zsh"
 
 # Help remembering aliases

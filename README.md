@@ -8,7 +8,7 @@ Set zsh as your login shell:
 
 Clone the repo onto your device:
 
-    $ git clone https://github.com/rwanyoike/dotfiles ~/.dotfiles
+    $ git clone git@github.com:rwanyoike/dotfiles.git ~/.dotfiles
 
 Install [rcm](https://github.com/thoughtbot/rcm) (rc file management):
 

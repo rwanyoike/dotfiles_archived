@@ -10,4 +10,4 @@ zcorrection='true'
 zhighlighters=('main' 'brackets' 'cursor' 'line')
 
 # Prompt settings
-zprompt_theme='steeef'
+zprompt_theme='minimal'

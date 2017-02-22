@@ -54,7 +54,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(guru-mode hy-mode oceanic-theme)
+   dotspacemacs-additional-packages '(guru-mode
+                                      hy-mode
+                                      oceanic-theme)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -132,7 +134,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Menlo for Powerline"
+   dotspacemacs-default-font '("SF Mono"
                                :size 12
                                :weight normal
                                :width normal
@@ -291,6 +293,8 @@ This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq exec-path-from-shell-check-startup-files nil)
+  (unless (display-graphic-p (selected-frame))
+    (setq dotspacemacs-themes '(spacemacs-dark)))
   )
 
 (defun dotspacemacs/user-config ()
@@ -300,9 +304,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq powerline-default-separator 'arrow)
   (guru-global-mode t)
-  (setq ns-use-native-fullscreen nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

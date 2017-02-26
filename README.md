@@ -1,16 +1,10 @@
 # rwanyoike's dotfiles
 
-Set zsh as your login shell:
+Your terminal shell may become the talk of the town!
 
-    $ chsh -s $(which zsh)
+## Install [rcm](https://github.com/thoughtbot/rcm) (rc file management)
 
-## Initial setup
-
-Clone the repo onto your device:
-
-    $ git clone git@github.com:rwanyoike/dotfiles.git ~/.dotfiles
-
-Install [rcm](https://github.com/thoughtbot/rcm) (rc file management):
+A management suite for dotfiles.
 
 **Arch Linux:**
 
@@ -30,65 +24,107 @@ Install [rcm](https://github.com/thoughtbot/rcm) (rc file management):
 
 [https://github.com/thoughtbot/rcm#installation](https://github.com/thoughtbot/rcm#installation)
 
-## Link dotfiles
+## Clone the repository
 
-Install the dotfiles:
+    $ git clone https://github.com/rwanyoike/dotfiles.git $HOME/.dotfiles
+
+## Symlink the dotfiles
+
+This command will update and install the dotfiles:
 
     $ env RCRC=$HOME/.dotfiles/rcrc rcup
 
-After the initial installation, you can run `rcup` without the one-time variable `RCRC` being set (`rcup` will symlink the repo's `rcrc` to `~/.rcrc` for future runs of `rcup`).
-
-This command will create symlinks for config files in your home directory. Setting the `RCRC` environment variable tells `rcup` to use standard configuration options:
+Setting the `RCRC` environment variable tells `rcup` to use the configuration options in `$HOME/.dotfiles/rcrc`:
 
 * Exclude the `README.md` and `LICENSE` files, which are part of the `dotfiles` repository but do not need to be symlinked in.
 
-You can safely run `rcup` multiple times to update:
+After the initial installation, you can run `rcup` without the one-time variable `RCRC` being set (`rcup` will symlink the repo's `rcrc` to `$HOME/.rcrc` for future runs of `rcup`).
 
-    $ rcup
+You can safely run `rcup` multiple times to update.
 
-You should run `rcup` after pulling a new version of the repository to symlink any new files in the repository.
+## Set Zsh as your shell
 
-## $HOME sweet ~/
+    $ chsh -s $(which zsh)
 
-Tools that live in my home directory:
+Install [zplug](https://github.com/zplug/zplug) - A Zsh plugin manager:
 
-### Node version management
+    $ git clone https://github.com/zplug/zplug $HOME/.zplug
 
-[nvm](https://github.com/creationix/nvm):
+To update `zplug` in the future, run:
 
-    $ git clone https://github.com/creationix/nvm ~/.nvm
+    $ zplug update
 
-### Python version management
+Log out and login back again to use your new shell.
 
-[pyenv](https://github.com/yyuu/pyenv):
+Great success!
 
-    $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-    $ git clone https://github.com/yyuu/pyenv-doctor.git ~/.pyenv/plugins/pyenv-doctor
-    $ git clone https://github.com/yyuu/pyenv-installer.git ~/.pyenv/plugins/pyenv-installer
-    $ git clone https://github.com/yyuu/pyenv-update.git ~/.pyenv/plugins/pyenv-update
-    $ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-    $ git clone https://github.com/yyuu/pyenv-which-ext.git ~/.pyenv/plugins/pyenv-which-ext
+---
 
-To update, run `pyenv update`.
+## Tools that live in `$HOME`
 
-### Ruby version management
+### Version management
 
-[rvm](https://github.com/rvm/rvm):
+Command-line tools that allow you to easily install, manage, and work with multiple "language" environments and enables switching between them.
+
+#### Node version management
+
+[nvm](https://github.com/creationix/nvm) - Node Version Manager:
+
+    $ git clone https://github.com/creationix/nvm $HOME/.nvm
+
+<!-- -->
+
+    $ nvm --version
+    x.x.x
+
+To update `nvm` in the future, run:
+
+    $ (cd $HOME/.nvm; git pull)
+
+#### Python version management
+
+[pyenv](https://github.com/yyuu/pyenv) - Python version management:
+
+    $ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+<!-- -->
+
+    $ pyenv --version
+    pyenv x.x.x
+
+To update `pyenv` in the future, run:
+
+    $ pyenv update
+
+#### Ruby version management
+
+[rvm](https://github.com/rvm/rvm) - Ruby enVironment Manager:
 
     $ curl -sSL https://get.rvm.io | bash -s stable
 
-To update, run `rvm get stable`.
+<!-- -->
 
-### Emacs distribution
+    $ rvm --version
+    rvm x.x.x
 
-[spacemacs](https://github.com/syl20bnr/spacemacs):
+To update `rvm` in the future, run:
 
-    $ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+    $ rvm get stable
 
-### Zsh plugin manager
+### Misc configurations
 
-[zplug](https://github.com/zplug/zplug):
+#### Emacs distribution
 
-    $ git clone https://github.com/zplug/zplug ~/.zplug
+[spacemacs](https://github.com/syl20bnr/spacemacs) - A community-driven Emacs distribution:
 
-To update, run `zplug update`.
+    $ git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
+
+The best editor is neither Emacs nor Vim, it's Emacs and Vim.
+
+#### Tmux configuration
+
+[.tmux](https://github.com/gpakosz/.tmux) - A self-contained, pretty and versatile tmux configuration file:
+
+    $ git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
+    $ ln -sf $HOME/.tmux/.tmux.conf
+    $ cp $HOME/.tmux/.tmux.conf.local $HOME

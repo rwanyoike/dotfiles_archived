@@ -19,6 +19,9 @@ zplug "eriner/zim", \
     use:init.zsh, \
     hook-build:"ln -s $ZPLUG_REPOS/eriner/zim/ ~/.zim"
 
+# Let zplug manage zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
 # Install available plugins
 if ! zplug check; then
     printf "Install Zsh plugins? (y/N): "

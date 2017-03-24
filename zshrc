@@ -12,7 +12,7 @@ zplug "djui/alias-tips"
 zplug "supercrabtree/k"
 
 # Manage local plugins
-zplug "~/.zsh", from:local
+zplug "$HOME/.zsh", from:local
 
 # Configuration framework
 zplug "eriner/zim", \
@@ -22,7 +22,7 @@ zplug "eriner/zim", \
 # Install available plugins
 if ! zplug check; then
     printf "Install Zsh plugins? (y/N): "
-    if read -q; then
+    if read -rq; then
         echo; zplug install
     fi
 fi

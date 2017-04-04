@@ -1,13 +1,25 @@
-# ZIM settings
-zmodules=('directory' 'environment' 'fasd' 'git' 'history' 'input' 'prompt' \
-          'spectrum' 'utility' 'syntax-highlighting' \
-          'history-substring-search' 'completion')
+#
+# ZIM (Zsh IMproved) settings.
+#
 
-# Utility settings
+zmodules=('directory' \
+          'environment' \
+          'fasd' \
+          'git' \
+          'history' \
+          'input' \
+          'prompt' \
+          'spectrum' \
+          'utility' \
+          'syntax-highlighting' \
+          'history-substring-search' \
+          'completion')
+
+# Utility settings.
 zcorrection='true'
 
-# Highlighting settings
+# Highlighting settings.
 zhighlighters=('main' 'brackets' 'cursor' 'line')
 
-# Prompt settings
+# Prompt settings.
 zprompt_theme='minimal'

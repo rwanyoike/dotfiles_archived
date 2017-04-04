@@ -1,28 +1,35 @@
-source ~/.zplug/init.zsh
+#
+# Executes commands at the start of an interactive session.
+#
 
-# Configuration framework
-prezto_modules=('node' 'python' 'ruby')
+source "$HOME/.zplug/init.zsh"
+
+# Manage local plugins.
+zplug "$HOME/.zsh", from:local
+
+# Configuration framework.
+prezto_modules=('python' 'ruby')
 zplug "zsh-users/prezto", \
     use:"modules/{${(j:,:)prezto_modules}}/init.zsh"
 
-# Help remembering aliases
+# Help remembering aliases.
 zplug "djui/alias-tips"
 
-# k is the new l, yo
+# k is the new l, yo.
 zplug "supercrabtree/k"
 
-# Manage local plugins
-zplug "$HOME/.zsh", from:local
+# Plugin for installing, updating and loading nvm.
+zplug "lukechilds/zsh-nvm"
 
-# Configuration framework
+# Configuration framework.
 zplug "eriner/zim", \
     use:init.zsh, \
     hook-build:"ln -s $ZPLUG_REPOS/eriner/zim/ ~/.zim"
 
-# Let zplug manage zplug
+# Let zplug manage zplug.
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# Install available plugins
+# Install available plugins.
 if ! zplug check; then
     printf "Install Zsh plugins? (y/N): "
     if read -rq; then

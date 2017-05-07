@@ -8,8 +8,10 @@ source "$HOME/.zplug/init.zsh"
 zplug "$HOME/.zsh", from:local
 
 # Configuration framework.
-zplug "modules/python", from:prezto
-zplug "modules/ruby", from:prezto, defer:1
+prezto_modules=('python' 'ruby')
+zplug "sorin-ionescu/prezto", \
+    use:"modules/{${(j:,:)prezto_modules}}/init.zsh", \
+    defer:1
 
 # Help remembering aliases.
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡  "

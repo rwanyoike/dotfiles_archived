@@ -1,1 +1,0 @@
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡  "

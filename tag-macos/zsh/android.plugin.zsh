@@ -1,1 +1,1 @@
-export ANDROID_HOME="/usr/local/share/android-sdk"
+export ANDROID_HOME="$(brew --prefix)/share/android-sdk"

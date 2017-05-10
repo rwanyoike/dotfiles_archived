@@ -1,2 +1,2 @@
-# Don't attempt to setup the shell.
-rvm_ignore_dotfiles=1
+# Don't attempt to setup the shell
+rvm_ignore_dotfiles=true

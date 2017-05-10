@@ -2,24 +2,27 @@
 # ZIM (Zsh IMproved) settings.
 #
 
-zmodules=('directory' \
-          'environment' \
-          'fasd' \
-          'git' \
-          'history' \
-          'input' \
-          'prompt' \
-          'spectrum' \
-          'utility' \
-          'syntax-highlighting' \
-          'history-substring-search' \
-          'completion')
+zmodules=(directory \
+          environment \
+          fasd \
+          git \
+          history \
+          input \
+          prompt \
+          spectrum \
+          utility \
+          syntax-highlighting \
+          history-substring-search \
+          completion)
 
-# Utility settings.
-zcorrection='true'
+# Utility settings
+zcorrection=true
 
-# Highlighting settings.
-zhighlighters=('main' 'brackets' 'cursor' 'line')
+# Highlighting settings
+zhighlighters=(main \
+               brackets \
+               cursor \
+               line)
 
-# Prompt settings.
-zprompt_theme='minimal'
+# Prompt settings
+zprompt_theme=minimal

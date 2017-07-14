@@ -55,9 +55,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(editorconfig
-                                      guru-mode
-                                      oceanic-theme)
+   dotspacemacs-additional-packages '(dracula-theme
+                                      editorconfig
+                                      guru-mode)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -129,8 +129,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(oceanic
-                         spacemacs-dark)
+   dotspacemacs-themes '(dracula)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -292,10 +291,7 @@ executes.
 This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (setq exec-path-from-shell-check-startup-files nil)
-  (unless (display-graphic-p (selected-frame))
-    (setq dotspacemacs-themes '(spacemacs-dark)))
-  )
+  (setq exec-path-from-shell-check-startup-files nil))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.

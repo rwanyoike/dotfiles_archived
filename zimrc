@@ -1,6 +1,4 @@
-#
 # ZIM (Zsh IMproved) settings.
-#
 
 zmodules=(directory \
           environment \
@@ -15,14 +13,11 @@ zmodules=(directory \
           history-substring-search \
           completion)
 
-# Utility settings
+# Utility settings.
 zcorrection=true
 
-# Highlighting settings
-zhighlighters=(main \
-               brackets \
-               cursor \
-               line)
+# Highlighting settings.
+zhighlighters=(main brackets cursor line)
 
-# Prompt settings
+# Prompt settings.
 zprompt_theme=minimal

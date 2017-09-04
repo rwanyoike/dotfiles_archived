@@ -1,22 +1,40 @@
 # dotfiles
 
-> There is no place like ~
+> There is no place like ~/
 
 Localhost. 🙌
+
+## Table of Contents
+
+- [Installation](#installation)
+    - [Install rcm (rc File Management)](#install-rcm-rc-file-management)
+    - [Symlink the Dotfiles](#symlink-the-dotfiles)
+    - [Install zplug](#install-zplug)
+    - [Set zsh as Your $SHELL](#set-zsh-as-your-shell)
+- [Version Management](#version-management)
+    - [Node](#node)
+    - [Python](#python)
+    - [Ruby](#ruby)
+- [Extra Configurations](#extra-configurations)
+    - [Emacs](#emacs)
+    - [Tmux](#tmux)
+- [Can I Use Your Files?](#can-i-use-your-files)
+    - [Contribute](#contribute)
+- [License](#license)
 
 ## Installation
 
 Clone the repo to `$HOME/.dotfiles`:
 
-    $ git clone https://github.com/rwanyoike/dotfiles.git $HOME/.dotfiles
+    $ git clone https://github.com/rwanyoike/dotfiles $HOME/.dotfiles
 
-### Install [rcm](https://github.com/thoughtbot/rcm) (rc File Management)
+### Install rcm (rc File Management)
 
-A management suite for dotfiles.
+[rcm](https://github.com/thoughtbot/rcm) - A management suite for dotfiles:
 
 **Arch Linux:**
 
-[https://aur.archlinux.org/packages/rcm/](https://aur.archlinux.org/packages/rcm/)
+    https://aur.archlinux.org/packages/rcm/
 
 **macOS (brew):**
 
@@ -32,15 +50,15 @@ A management suite for dotfiles.
 
 [https://github.com/thoughtbot/rcm#installation](https://github.com/thoughtbot/rcm#installation)
 
-### Symlink the dotfiles
+### Symlink the Dotfiles
 
 This command updates and installs the dotfiles:
 
     $ env RCRC=$HOME/.dotfiles/rcrc rcup
 
-### Install [zplug](https://github.com/zplug/zplug)
+### Install zplug
 
-A Zsh plugin manager:
+[zplug](https://github.com/zplug/zplug) - A zsh plugin manager:
 
     $ git clone https://github.com/zplug/zplug $HOME/.zplug
 
@@ -48,61 +66,81 @@ To update `zplug` in the future, run:
 
     $ zplug update
 
-### Set Zsh as your $SHELL
+### Set zsh as Your $SHELL
 
     $ chsh -s $(which zsh)
 
-Logout and login to use your new shell.
+Logout & login to use your new shell.
 
-### Version Management
+## Version Management
 
-#### Node
+### Node
 
-[nvm](https://github.com/creationix/nvm) - Node Version Manager:
+[nodenv](https://github.com/nodenv/nodenv) - NodeJS version management:
 
-    $ git clone https://github.com/creationix/nvm $HOME/.nvm
+    $ git clone https://github.com/nodenv/nodenv $HOME/.nodenv
+    $ git clone https://github.com/nodenv/node-build $HOME/.nodenv/plugins/node-build
+    $ git clone https://github.com/nodenv/nodenv-update $HOME/.nodenv/plugins/nodenv-update
 
-To update `nvm` in the future, run:
+To update `nodenv` in the future, run:
 
-    $ nvm upgrade
+    $ nodenv update
 
-#### Python
+License: MIT
+
+### Python
 
 [pyenv](https://github.com/yyuu/pyenv) - Python version management:
 
-    $ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+    $ git clone https://github.com/yyuu/pyenv $HOME/.pyenv
+    $ git clone https://github.com/yyuu/pyenv-update $HOME/.pyenv/plugins/pyenv-update
+    $ git clone https://github.com/yyuu/pyenv-virtualenv $HOME/.pyenv/plugins/pyenv-virtualenv
 
 To update `pyenv` in the future, run:
 
     $ pyenv update
 
-#### Ruby
+License: MIT
 
-[rvm](https://github.com/rvm/rvm) - Ruby enVironment Manager:
+### Ruby
 
-    $ curl -sSL https://get.rvm.io | bash -s stable
+[rbenv](https://github.com/rbenv/rbenv) - Ruby version management:
 
-To update `rvm` in the future, run:
+    $ git clone https://github.com/rbenv/rbenv $HOME/.rbenv
+    $ git clone https://github.com/rbenv/ruby-build $HOME/.rbenv/plugins/ruby-build
+    $ git clone https://github.com/rkh/rbenv-update $HOME/.rbenv/plugins/rbenv-update
 
-    $ rvm get stable
+To update `rbenv` in the future, run:
 
-### Misc Configurations
+    $ rbenv update
 
-#### Emacs
+License: MIT
+
+## Extra Configurations
+
+### Emacs
 
 [spacemacs](https://github.com/syl20bnr/spacemacs) - A community-driven Emacs distribution:
 
     $ git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
-#### Tmux
+License: GPLv3
 
-[.tmux](https://github.com/gpakosz/.tmux) - A self-contained, pretty and versatile tmux configuration file:
+### Tmux
 
-    $ git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
+[.tmux](https://github.com/gpakosz/.tmux) - A self-contained, pretty and versatile .tmux.conf configuration file:
+
+    $ git clone https://github.com/gpakosz/.tmux $HOME/.tmux
     $ ln -sf $HOME/.tmux/.tmux.conf
     $ cp $HOME/.tmux/.tmux.conf.local $HOME
 
-## Contribute
+License: WTFPLv2/MIT
+
+## Can I Use Your Files?
+
+Sure you can. But should you? :D (these _are_ personal configurations)
+
+### Contribute
 
 Feel free to dive in. [Open an issue](https://github.com/rwanyoike/dotfiles/issues/new) or submit a PR.
 

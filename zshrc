@@ -11,21 +11,17 @@ zplug "eriner/zim", \
     use:init.zsh, \
     hook-build:"ln -s ${ZPLUG_REPOS}/eriner/zim/ ~/.zim"
 
-# Help remembering aliases
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡  "
+# Help remembering aliases.
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
 zplug "djui/alias-tips"
 
 # k is the new l, yo.
 zplug "supercrabtree/k"
 
-# Configuration framework
-prezto_modules=(python ruby)
+# Configuration framework.
+prezto_modules=(node python ruby)
 zplug "sorin-ionescu/prezto", \
     use:"modules/{${(j:,:)prezto_modules}}/init.zsh"
-
-# Plugin for installing, updating and loading nvm
-# export NVM_LAZY_LOAD=true
-zplug "lukechilds/zsh-nvm"
 
 # Let zplug manage zplug.
 zplug "zplug/zplug", \

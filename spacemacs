@@ -42,16 +42,11 @@ values."
      helm
      html
      javascript
-     (markdown :variables
-               markdown-live-preview-engine 'vmd)
+     (markdown :variables markdown-live-preview-engine 'vmd)
      org
      osx
      python
      selectric
-     typescript
-     yaml
-     (shell :variables
-            shell-default-height 50)
      shell-scripts
      spell-checking
      syntax-checking
@@ -63,7 +58,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(dracula-theme
                                       editorconfig
-                                      guru-mode)
+                                      hardcore-mode)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -267,7 +262,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -309,6 +304,8 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq exec-path-from-shell-check-startup-files nil)
+  (setq too-hardcore-backspace t)
+  (setq too-hardcore-return t)
   )
 
 (defun dotspacemacs/user-config ()
@@ -319,8 +316,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq powerline-default-separator 'utf-8)
-  (guru-global-mode t)
   (editorconfig-mode t)
+  (global-hardcore-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

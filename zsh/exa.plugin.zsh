@@ -1,6 +1,7 @@
 # https://github.com/ogham/exa
 
 if hash exa 2> /dev/null; then
+    alias ls="exa"
     # Aliases adapted from zim.
     alias l="exa --long --all --group"  # all files, human-readable sizes
     [[ -n ${PAGER} ]] && alias lm="l | ${PAGER}" # all files, human-readable sizes, use pager

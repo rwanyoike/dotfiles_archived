@@ -2,10 +2,6 @@
 
 source ${HOME}/.zplug/init.zsh
 
-# Manage local plugins.
-zplug "${HOME}/.zsh", \
-    from:local
-
 # Configuration framework.
 zplug "eriner/zim", \
     use:init.zsh, \
@@ -15,13 +11,14 @@ zplug "eriner/zim", \
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
 zplug "djui/alias-tips"
 
-# k is the new l, yo.
-zplug "supercrabtree/k"
-
 # Configuration framework.
 prezto_modules=(node python ruby)
 zplug "sorin-ionescu/prezto", \
     use:"modules/{${(j:,:)prezto_modules}}/init.zsh"
+
+# Manage local plugins.
+zplug "${HOME}/.zsh", \
+    from:local
 
 # Let zplug manage zplug.
 zplug "zplug/zplug", \

@@ -49,6 +49,7 @@ values."
      python
      rust
      selectric
+     shell
      shell-scripts
      spell-checking
      syntax-checking
@@ -137,11 +138,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Fira Code"
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.0)
+                               :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -324,6 +325,9 @@ you should place your code here."
   (global-hardcore-mode)
   (spacemacs|diminish hardcore-mode)
   (spacemacs|diminish editorconfig-mode)
+  ;; javascript
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

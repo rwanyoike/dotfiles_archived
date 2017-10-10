@@ -43,7 +43,7 @@ values."
      helm
      html
      javascript
-     (markdown :variables markdown-live-preview-engine 'vmd)
+     markdown
      org
      osx
      python
@@ -53,6 +53,7 @@ values."
      shell-scripts
      spell-checking
      syntax-checking
+     typescript
      version-control
      )
    ;; List of additional packages that will be installed without being

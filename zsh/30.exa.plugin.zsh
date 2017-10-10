@@ -2,7 +2,7 @@
 
 if hash exa 2> /dev/null; then
     alias ls="exa"
-    # Aliases adapted from zim.
+    # Aliases adapted from https://github.com/Eriner/zim.
     alias l="exa --long --all --group"  # all files, human-readable sizes
     [[ -n ${PAGER} ]] && alias lm="l | ${PAGER}" # all files, human-readable sizes, use pager
     alias ll="exa --long --group"       # human-readable sizes

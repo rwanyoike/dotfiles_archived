@@ -1,6 +1,8 @@
 # ZIM (Zsh IMproved) settings.
 
-zmodules=(directory \
+zmodules=(archive \
+          autosuggestions \
+          directory \
           environment \
           fasd \
           git \

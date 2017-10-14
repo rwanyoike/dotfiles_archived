@@ -43,6 +43,7 @@ values."
      helm
      html
      javascript
+     lua
      markdown
      org
      osx

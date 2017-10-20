@@ -4,19 +4,16 @@ source "${HOME}/.zplug/init.zsh"
 
 # Configuration framework.
 zplug "eriner/zim", \
-    hook-build:"ln -s ${ZPLUG_REPOS}/eriner/zim/ ~/.zim", \
-    depth:1
+    hook-build:"ln -s ${ZPLUG_REPOS}/eriner/zim/ ~/.zim"
 
 # Help remembering aliases.
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
-zplug "djui/alias-tips", \
-    depth:1
+zplug "djui/alias-tips"
 
 # Configuration framework.
 PREZTO_MODULES=(node python ruby)
 zplug "sorin-ionescu/prezto", \
-    use:"modules/{${(j:,:)PREZTO_MODULES}}/init.zsh", \
-    depth:1
+    use:"modules/{${(j:,:)PREZTO_MODULES}}/init.zsh"
 
 # Manage local plugins.
 zplug "${HOME}/.zsh", \
@@ -24,8 +21,7 @@ zplug "${HOME}/.zsh", \
 
 # Let zplug manage zplug.
 zplug "zplug/zplug", \
-    hook-build:"zplug --self-manage", \
-    depth:1
+    hook-build:"zplug --self-manage"
 
 if ! zplug check; then
     printf "Install Zsh plugins? (y/N): "

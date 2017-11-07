@@ -15,11 +15,8 @@ zmodules=(archive \
           history-substring-search \
           completion)
 
-# Utility settings.
-zcorrection=true
-
 # Highlighting settings.
 zhighlighters=(main brackets cursor line)
 
 # Prompt settings.
-zprompt_theme=minimal
+zprompt_theme=walters

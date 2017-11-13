@@ -38,8 +38,10 @@ This function should only modify configuration layer settings."
      auto-completion
      better-defaults
      clojure
+     colors
      dash
      emacs-lisp
+     git
      helm
      html
      javascript
@@ -95,6 +97,10 @@ It should only modify the values of Spacemacs settings."
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
    dotspacemacs-elpa-timeout 5
+   ;; If non-nil then Spacelpa repository is the primary source to install
+   ;; a locked version of packages. If nil then Spacemacs will install the lastest
+   ;; version of packages from MELPA. (default nil)
+   dotspacemacs-use-spacelpa nil
    ;; If non-nil then verify the signature for downloaded Spacelpa archives.
    ;; (default nil)
    dotspacemacs-verify-spacelpa-archives nil
@@ -122,7 +128,7 @@ It should only modify the values of Spacemacs settings."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 0
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
    ;; Possible values for list-type are:
@@ -365,12 +371,12 @@ before packages are loaded."
    (setq powerline-default-separator 'utf-8)
    (spaceline-compile)) ; https://github.com/syl20bnr/spacemacs/issues/6027
   (editorconfig-mode t)
+  (spacemacs|diminish editorconfig-mode)
   (global-hardcore-mode)
   (spacemacs|diminish hardcore-mode)
-  (spacemacs|diminish editorconfig-mode)
-  ;; javascript
-  (setq-default js2-basic-offset 2)
-  (setq-default js-indent-level 2)
+  (setq-default magit-repository-directories '("~/Documents/SRC/PRIVATE"))
+  (setq-default js2-basic-offset 2) ;; javascript
+  (setq-default js-indent-level 2) ;; javascript
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

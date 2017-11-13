@@ -1,5 +1,9 @@
 # Executes commands at the start of an interactive session.
 
+# tramp-mode: Disable fancy shell.
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1="$ " \
+    && return
+
 source "${HOME}/.zplug/init.zsh"
 
 # Configuration framework.

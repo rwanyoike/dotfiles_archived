@@ -19,4 +19,4 @@ zmodules=(archive \
 zhighlighters=(main brackets cursor line)
 
 # Prompt settings.
-zprompt_theme=walters
+zprompt_theme=lean

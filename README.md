@@ -8,7 +8,7 @@ Personal dotfiles.
 
 - [Installation](#installation)
   * [Version Management](#version-management)
-  * [More Configurations](#more-configurations)
+  * [More](#more)
 - [Can I Use Your Files?](#can-i-use-your-files)
   * [Contribute](#contribute)
 - [License](#license)
@@ -22,18 +22,17 @@ git clone https://github.com/rwanyoike/dotfiles $HOME/.dotfiles
 
 ```bash
 # rcm, https://github.com/thoughtbot/rcm
-# A management suite for dotfiles
 # License: BSD
-# - Arch Linux: https://aur.archlinux.org/packages/rcm/
 # - macOS (brew):
 brew tap thoughtbot/formulae
 brew install rcm
+# - Arch Linux:
+# https://aur.archlinux.org/packages/rcm/
 
 # zplug, https://github.com/zplug/zplug
-# A zsh plugin manager
 # License: MIT
-# To update `zplug` in the future, run: zplug update
 git clone https://github.com/zplug/zplug $HOME/.zplug
+# To update `zplug`, run: zplug update
 ```
 
 ```bash
@@ -48,40 +47,35 @@ chsh -s $(which zsh) # ┌(ಠ‿ಠ)┘
 
 ```bash
 # nodenv, https://github.com/nodenv/nodenv
-# NodeJS version management
 # License: MIT
-# To update `nodenv` in the future, run: nodenv update
 git clone https://github.com/nodenv/nodenv $HOME/.nodenv
 git clone https://github.com/nodenv/node-build $HOME/.nodenv/plugins/node-build
 git clone https://github.com/nodenv/nodenv-update $HOME/.nodenv/plugins/nodenv-update
+# To update `nodenv`, run: nodenv update
 
 # pyenv, https://github.com/yyuu/pyenv
-# Python version management
 # License: MIT
-# To update `pyenv` in the future, run: pyenv update
 git clone https://github.com/yyuu/pyenv $HOME/.pyenv
 git clone https://github.com/yyuu/pyenv-update $HOME/.pyenv/plugins/pyenv-update
 git clone https://github.com/yyuu/pyenv-virtualenv $HOME/.pyenv/plugins/pyenv-virtualenv
+# To update `pyenv`, run: pyenv update
 
 # rbenv, https://github.com/rbenv/rbenv
-# Ruby version management
 # License: MIT
-# To update `rbenv` in the future, run: rbenv update
 git clone https://github.com/rbenv/rbenv $HOME/.rbenv
 git clone https://github.com/rbenv/ruby-build $HOME/.rbenv/plugins/ruby-build
 git clone https://github.com/rkh/rbenv-update $HOME/.rbenv/plugins/rbenv-update
+# To update `rbenv`, run: rbenv update
 ```
 
-### More Configurations
+### More
 
 ```bash
 # spacemacs, https://github.com/syl20bnr/spacemacs
-# A community-driven Emacs distribution
 # License: GPLv3
 git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
 # .tmux, https://github.com/gpakosz/.tmux
-# A self-contained, pretty and versatile .tmux.conf configuration file
 # License: WTFPLv2/MIT
 git clone https://github.com/gpakosz/.tmux $HOME/.tmux
 ln -sf $HOME/.tmux/.tmux.conf $HOME

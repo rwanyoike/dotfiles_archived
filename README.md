@@ -92,4 +92,4 @@ Feel free to dive in. [Open an issue](https://github.com/rwanyoike/dotfiles/issu
 
 ## License
 
-[MIT](LICENSE) © Raymond Wanyoike
+[MIT](LICENSE) © 2017 Raymond Wanyoike

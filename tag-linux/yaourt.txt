@@ -29,7 +29,6 @@ ripgrep
 screenfetch
 sysstat
 systemd-boot-pacman-hook
-terminus-font
 testdisk
 tmux
 vim

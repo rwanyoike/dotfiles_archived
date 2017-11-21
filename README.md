@@ -1,29 +1,22 @@
 # dotfiles
 
-> There's no place like $HOME
+> Personal configurations. ಠ_ರೃ
 
-Personal dotfiles.
-
-## Table of Contents
-
-- [Installation](#installation)
-  * [Version Management](#version-management)
-  * [More](#more)
-- [Can I Use Your Files?](#can-i-use-your-files)
-  * [Contribute](#contribute)
-- [License](#license)
+There's no place like $HOME.
 
 ## Installation
 
+Clone the repo to `$HOME/.dotfiles`:
+
 ```bash
-# Clone the repo to $HOME/.dotfiles
 git clone https://github.com/rwanyoike/dotfiles $HOME/.dotfiles
 ```
+
+Setup management:
 
 ```bash
 # rcm, https://github.com/thoughtbot/rcm
 # License: BSD
-# - macOS (brew):
 brew tap thoughtbot/formulae
 brew install rcm
 # - Arch Linux:
@@ -35,15 +28,19 @@ git clone https://github.com/zplug/zplug $HOME/.zplug
 # To update `zplug`, run: zplug update
 ```
 
-```bash
-# Symlink the dotfiles
-env RCRC=$HOME/.dotfiles/rcrc rcup
+Symlink the dotfiles:
 
-# Set zsh as Your $bash
+```bash
+env RCRC=$HOME/.dotfiles/rcrc rcup
+```
+
+Set zsh as your `$SHELL`:
+
+```bash
 chsh -s $(which zsh) # ┌(ಠ‿ಠ)┘
 ```
 
-### Version Management
+## Essentials
 
 ```bash
 # nodenv, https://github.com/nodenv/nodenv
@@ -68,7 +65,7 @@ git clone https://github.com/rkh/rbenv-update $HOME/.rbenv/plugins/rbenv-update
 # To update `rbenv`, run: rbenv update
 ```
 
-### More
+## More dotfiles
 
 ```bash
 # spacemacs, https://github.com/syl20bnr/spacemacs
@@ -85,10 +82,6 @@ cp $HOME/.tmux/.tmux.conf.local $HOME
 ## Can I Use Your Files?
 
 Sure you can. But should you? :) (these _are_ personal configurations)
-
-### Contribute
-
-Feel free to dive in. [Open an issue](https://github.com/rwanyoike/dotfiles/issues/new) or submit a PR.
 
 ## License
 

@@ -41,13 +41,14 @@ This function should only modify configuration layer settings."
      colors
      dash
      emacs-lisp
+     emoji
      git
      helm
      html
      javascript
      lua
      markdown
-     neotree
+     ;; neotree
      org
      osx
      python
@@ -56,7 +57,9 @@ This function should only modify configuration layer settings."
      shell
      shell-scripts
      spell-checking
+     sphinx
      syntax-checking
+     treemacs
      typescript
      version-control
      )

@@ -65,7 +65,8 @@ This function should only modify configuration layer settings."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(editorconfig
-                                      hardcore-mode)
+                                      hardcore-mode
+                                      disable-mouse)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -374,6 +375,8 @@ before packages are loaded."
   (spacemacs|diminish editorconfig-mode)
   (global-hardcore-mode)
   (spacemacs|diminish hardcore-mode)
+  (global-disable-mouse-mode)
+  (spacemacs|diminish global-disable-mouse-mode)
   (setq-default js2-basic-offset 2) ;; javascript
   (setq-default js-indent-level 2) ;; javascript
   (setq-default web-mode-code-indent-offset 2) ;; html

@@ -67,9 +67,9 @@ This function should only modify configuration layer settings."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(editorconfig
-                                      hardcore-mode
-                                      disable-mouse)
+   dotspacemacs-additional-packages '(disable-mouse
+                                      editorconfig
+                                      hardcore-mode)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -376,10 +376,10 @@ before packages are loaded."
    (spaceline-compile)) ; https://github.com/syl20bnr/spacemacs/issues/6027
   (editorconfig-mode t)
   (spacemacs|diminish editorconfig-mode)
-  (global-hardcore-mode)
-  (spacemacs|diminish hardcore-mode)
   (global-disable-mouse-mode)
   (spacemacs|diminish global-disable-mouse-mode)
+  (global-hardcore-mode)
+  (spacemacs|diminish hardcore-mode)
   (setq-default js2-basic-offset 2) ;; javascript
   (setq-default js-indent-level 2) ;; javascript
   (setq-default web-mode-code-indent-offset 2) ;; html

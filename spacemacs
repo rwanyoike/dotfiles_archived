@@ -45,13 +45,14 @@ This function should only modify configuration layer settings."
      git
      helm
      html
-     javascript
+     (javascript :variables node-add-modules-path t)
      lua
      markdown
      ;; neotree
      org
      osx
      python
+     ranger
      rust
      selectric
      shell

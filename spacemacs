@@ -380,11 +380,6 @@ before packages are loaded."
   (spacemacs|diminish global-disable-mouse-mode)
   (global-hardcore-mode)
   (spacemacs|diminish hardcore-mode)
-  (setq-default js2-basic-offset 2) ;; javascript
-  (setq-default js-indent-level 2) ;; javascript
-  (setq-default web-mode-code-indent-offset 2) ;; html
-  (setq-default web-mode-markup-indent-offset 2) ;; html
-  (setq-default web-mode-css-indent-offset 2) ;; html
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

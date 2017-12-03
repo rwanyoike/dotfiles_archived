@@ -9,7 +9,6 @@ exfat-utils
 fd-rs
 hfsprogs
 htop
-intel-ucode
 iotop
 iperf3
 linux-tools-meta
@@ -19,7 +18,6 @@ mosh
 mtr
 ncdu
 nfs-utils
-openvpn
 pass
 powerpill
 powertop
@@ -28,7 +26,6 @@ rcm
 ripgrep
 screenfetch
 sysstat
-systemd-boot-pacman-hook
 testdisk
 tmux
 vim

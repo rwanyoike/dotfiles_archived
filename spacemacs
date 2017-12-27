@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      clojure
      colors
      dash
+     docker
      emacs-lisp
      emoji
      git

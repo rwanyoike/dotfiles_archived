@@ -1,1 +1,1 @@
-export PATH="$(brew --prefix)/sbin:$PATH"
+export PATH="$(brew --prefix)/sbin:${PATH}"

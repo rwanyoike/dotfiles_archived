@@ -1,0 +1,114 @@
+---
+
+- hosts: "all"
+  tasks:
+    - name: "clone the syl20bnr/spacemacs repository"
+      git:
+        repo: "https://github.com/syl20bnr/spacemacs"
+        dest: "~/.emacs.d"
+        version: "develop"
+      tags:
+        - "emacs"
+
+    - name: "clone the gpakosz/.tmux repository"
+      git:
+        repo: "https://github.com/gpakosz/.tmux"
+        dest: "~/.tmux"
+      tags:
+        - "tmux"
+
+    - name: "link the .tmux/.tmux.conf file"
+      file:
+        src: "~/.tmux/.tmux.conf"
+        dest: "~/.tmux.conf"
+        state: "link"
+      tags:
+        - "tmux"
+
+    - name: "clone the zplug/zplug repository"
+      git:
+        repo: "https://github.com/zplug/zplug"
+        dest: "~/.zplug"
+      tags:
+        - "zplug"
+
+    - name: "clone the yyuu/pyenv repository"
+      git:
+        repo: "https://github.com/yyuu/pyenv"
+        dest: "~/.pyenv"
+      tags:
+        - "pyenv"
+
+    - name: "clone the yyuu/pyenv-virtualenv repository"
+      git:
+        repo: "https://github.com/yyuu/pyenv-virtualenv"
+        dest: "~/.pyenv/plugins/pyenv-virtualenv"
+      tags:
+        - "pyenv"
+
+    - name: "clone the rbenv/rbenv repository"
+      git:
+        repo: "https://github.com/rbenv/rbenv"
+        dest: "~/.rbenv"
+      tags:
+        - "rbenv"
+
+    - name: "clone the rbenv/ruby-build repository"
+      git:
+        repo: "https://github.com/rbenv/ruby-build"
+        dest: "~/.rbenv/plugins/ruby-build"
+      tags:
+        - "rbenv"
+
+    - name: "clone the nodenv/nodenv repository"
+      git:
+        repo: "https://github.com/nodenv/nodenv"
+        dest: "~/.nodenv"
+      tags:
+        - "nodenv"
+
+    - name: "clone the nodenv/node-build repository"
+      git:
+        repo: "https://github.com/nodenv/node-build"
+        dest: "~/.nodenv/plugins/node-build"
+      tags:
+        - "nodenv"
+
+    - name: "link the dotfiles files"
+      file:
+        src: "~/.dotfiles/{{ item }}"
+        dest: "~/.{{ item }}"
+        state: "link"
+      with_items:
+        - "gemrc"
+        - "gitconfig"
+        - "gitignore"
+        - "spacemacs"
+        - "zimrc"
+        - "zlogout"
+        - "zshrc"
+      tags:
+        - "dotfiles"
+
+    - name: "create the zsh plugin directory"
+      file:
+        path: "~/.zsh"
+        state: "directory"
+      tags:
+        - "dotfiles"
+
+    - name: "register a variable"
+      shell: "ls -1 ~/.dotfiles/zsh/"
+      register: "zsh_plugin_files"
+      changed_when: false
+      tags:
+        - "dotfiles"
+
+    - name: "link the zsh plugin files"
+      file:
+        src: "~/.dotfiles/zsh/{{ item }}"
+        dest: "~/.zsh/{{ item }}"
+        state: "link"
+      with_items: "{{ zsh_plugin_files.stdout_lines }}"
+      tags:
+        - "dotfiles"

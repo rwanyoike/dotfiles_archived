@@ -1,22 +1,27 @@
-# ZIM (Zsh IMproved) settings.
+# ZIM (Zsh IMproved) settings
 
-zmodules=(archive \
-          autosuggestions \
-          directory \
-          environment \
-          fasd \
-          git \
-          history \
-          input \
-          prompt \
-          spectrum \
-          utility \
-          syntax-highlighting \
-          history-substring-search \
-          completion)
+zmodules=(
+     archive \
+     autosuggestions \
+     directory \
+     environment \
+     fasd \
+     git \
+     history \
+     input \
+     prompt \
+     spectrum \
+     utility \
+     syntax-highlighting \
+     history-substring-search \
+     completion
+)
 
-# Highlighting settings.
-zhighlighters=(main brackets cursor line)
+zhighlighters=(
+     main \
+     brackets \
+     cursor \
+     line
+)
 
-# Prompt settings.
 zprompt_theme=lean

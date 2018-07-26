@@ -1,6 +1,5 @@
 # See: http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
 
-# Emacs style
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 

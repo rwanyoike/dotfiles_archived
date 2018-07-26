@@ -104,7 +104,7 @@
       tags:
         - "dotfiles"
 
-    - name: "register a variable"
+    - name: "list the zsh plugin files"
       shell: "ls -1 ~/.dotfiles/zsh/"
       register: "zsh_plugin_files"
       changed_when: false

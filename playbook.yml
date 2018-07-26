@@ -74,6 +74,13 @@
       tags:
         - "nodenv"
 
+    - name: "clone the syndbg/goenv repository"
+      git:
+        repo: "https://github.com/syndbg/goenv"
+        dest: "~/.goenv"
+      tags:
+        - "goenv"
+
     - name: "link the dotfiles files"
       file:
         src: "~/.dotfiles/{{ item }}"

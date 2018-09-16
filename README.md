@@ -15,6 +15,7 @@ $ git clone https://github.com/rwanyoike/dotfiles ${HOME}/.dotfiles
 Break it down 💃:
 
 ```shell
+$ pip install --upgrade ansible
 $ cd ${HOME}/.dotfiles
 $ ansible-playbook playbook.yml
 ```
@@ -22,9 +23,5 @@ $ ansible-playbook playbook.yml
 Set your default shell:
 
 ```shell
-$ chsh -s $(which zsh) # ┌(ಠ‿ಠ)┘
+$ chsh --shell $(which zsh) # ┌(ಠ‿ಠ)┘
 ```
-
-## Can I Use Your Files
-
-Sure you can. But should you? :) (these _are_ personal configurations)

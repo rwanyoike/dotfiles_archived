@@ -1,0 +1,30 @@
+---
+
+- name: "({{ dotfiles_path }}) find the directories"
+  find:
+    path: "{{ dotfiles_path }}"
+    file_type: "directory"
+    recurse: true
+  register: "dotfiles_directories"
+  changed_when: false
+
+- name: "({{ dotfiles_path }}) make the directories"
+  file:
+    path: "~/.{{ item.replace(dotfiles_path ~ '/', '') }}"
+    state: "directory"
+  with_items: "{{ dotfiles_directories.files | map(attribute='path') | list }}"
+
+- name: "({{ dotfiles_path }}) find the files"
+  find:
+    path: "{{ dotfiles_path }}"
+    file_type: "file"
+    recurse: true
+  register: "dotfiles_files"
+  changed_when: false
+
+- name: "({{ dotfiles_path }}) link the files"
+  file:
+    src: "~/.dotfiles/{{ item }}"
+    dest: "~/.{{ item.replace(dotfiles_path ~ '/', '') }}"
+    state: "link"
+  with_items: "{{ dotfiles_files.files | map(attribute='path') | list }}"

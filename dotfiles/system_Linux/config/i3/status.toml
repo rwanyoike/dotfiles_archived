@@ -1,0 +1,44 @@
+[theme]
+name = "gruvbox-dark"
+
+[theme.overrides]
+# separator = " "
+
+[icons]
+# name = "none"
+name = "awesome"
+
+[icons.overrides]
+cpu = " \uF3FD "
+
+[[block]]
+block = "uptime"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 2
+
+[[block]]
+block = "net"
+interval = 2
+device = "wlp1s0"
+# speed_up = false
+graph_down = true
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "battery"
+interval = 10
+
+[[block]]
+block = "time"
+interval = 60
+# format = "%R"

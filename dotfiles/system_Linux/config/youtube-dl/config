@@ -1,2 +1,3 @@
 --external-downloader aria2c
 --external-downloader-args '-c -x 5 -k 2M'
+--format 'best[height<=1080]'

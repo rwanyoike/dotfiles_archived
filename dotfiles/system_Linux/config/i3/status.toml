@@ -28,8 +28,7 @@ interval = 2
 block = "net"
 interval = 2
 device = "wlp1s0"
-# speed_up = false
-graph_down = true
+# graph_down = true
 
 [[block]]
 block = "sound"

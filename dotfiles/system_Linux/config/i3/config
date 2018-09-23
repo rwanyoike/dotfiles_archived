@@ -153,9 +153,10 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures
+exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
-exec --no-startup-id compton -b
 
 # set primary gruvbox colorscheme colors
 set $bg #282828
@@ -175,6 +176,7 @@ bar {
   i3bar_command i3bar -t
   status_command i3status-rs ~/.config/i3/status.toml
   tray_padding 0
+  height 28
 
   colors {
     background $bg
@@ -194,7 +196,8 @@ client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent $red $red $white $red $red
 
-gaps inner 2
-gaps outer 2
-# smart_gaps on
-# smart_borders on
+gaps inner 5
+gaps outer 0
+
+default_border normal 5
+default_floating_border normal 5

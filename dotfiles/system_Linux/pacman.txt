@@ -4,12 +4,14 @@ arch-wiki-docs
 aspell-en
 audacity
 bat
+bluez-utils
 breeze
 clipmenu
 clipnotify
 compton
 darkhttpd
 deadbeef
+dmidecode
 downgrade
 dunst
 emacs
@@ -79,4 +81,6 @@ trizen
 ttf-fira-code
 vim
 vnstat
+xorg-server
+xorg-xinit
 zsh

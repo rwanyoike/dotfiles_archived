@@ -1,6 +1,6 @@
 # See: https://github.com/ogham/exa
 
-if hash exa 2> /dev/null; then
+if command -v exa &> /dev/null; then
     alias ls="exa --group-directories-first"
     # Aliases adapted from https://github.com/Eriner/zim
     alias l="ls --long --group --git --all" # all files, human-readable sizes

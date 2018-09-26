@@ -1,4 +1,4 @@
-# ZIM (Zsh IMproved) settings
+# See: https://github.com/zimfw/zimfw
 
 zmodules=(
      archive \

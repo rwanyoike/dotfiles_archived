@@ -44,17 +44,15 @@ This function should only modify configuration layer settings."
      better-defaults
      clojure
      colors
-     dash
+     csv
      docker
      emacs-lisp
      emoji
      git
      helm
      html
-     (javascript :variables node-add-modules-path t)
-     lua
+     javascript
      markdown
-     ;; neotree
      org
      osx
      python
@@ -65,10 +63,8 @@ This function should only modify configuration layer settings."
      shell-scripts
      spell-checking
      syntax-checking
-     treemacs
-     typescript
      version-control
-     yaml
+     ;; yaml
      )
 
    ;; List of additional packages that will be installed without being
@@ -222,7 +218,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Monospace"
                                :size 16
                                :weight normal
                                :width normal)

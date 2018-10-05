@@ -2,15 +2,18 @@ alsa-utils
 android-sdk-platform-tools
 arch-wiki-docs
 aspell-en
+atril
 audacity
 bat
 bluez-utils
 breeze
+calibre
 clipmenu
 clipnotify
 compton
 darkhttpd
 deadbeef
+dialog
 dmidecode
 downgrade
 dunst
@@ -22,7 +25,6 @@ feh
 firefox
 gnome-themes-extra
 google-chrome
-hdparm
 hfsprogs
 htop
 i3-gaps
@@ -59,6 +61,7 @@ p7zip
 pass
 powerpill
 powertop
+pqiv
 progress
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -75,6 +78,7 @@ sysstat
 systemd-boot-pacman-hook
 terminus-font
 testdisk
+tlp
 tmux
 tor
 trizen

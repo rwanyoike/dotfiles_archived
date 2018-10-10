@@ -6,7 +6,6 @@ atril
 audacity
 bat
 bluez-utils
-breeze
 calibre
 clipmenu
 clipnotify
@@ -23,8 +22,10 @@ exfat-utils
 fd
 feh
 firefox
+gnome-bluetooth
 gnome-themes-extra
 google-chrome
+graphicsmagick
 hfsprogs
 htop
 i3-gaps
@@ -64,7 +65,6 @@ powertop
 pqiv
 progress
 pulseaudio-alsa
-pulseaudio-bluetooth
 ranger
 rclone
 redshift

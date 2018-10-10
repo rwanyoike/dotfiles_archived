@@ -196,8 +196,5 @@ client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent $red $red $white $red $red
 
-gaps inner 5
-gaps outer 0
-
 default_border normal 5
 default_floating_border normal 5

@@ -83,6 +83,7 @@ tmux
 tor
 trizen
 ttf-fira-code
+ttf-hack
 vim
 vnstat
 xorg-server

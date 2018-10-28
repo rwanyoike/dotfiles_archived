@@ -1,0 +1,34 @@
+with import <nixpkgs> {};
+[ aria2
+  bat
+  coreutils
+  emacs
+  exa
+  exiftool
+  fd
+  ffmpeg
+  gdal
+  gnupg
+  gnused
+  htop
+  iperf
+  ispell
+  jq
+  mediainfo
+  mosh
+  mpv
+  mtr
+  ncdu
+  neofetch
+  nmap
+  p7zip
+  pass
+  peco
+  postgresql
+  rclone
+  ripgrep
+  shellcheck
+  tmux
+  tree
+  yarn
+]

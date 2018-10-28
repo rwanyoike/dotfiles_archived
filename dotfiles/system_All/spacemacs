@@ -53,6 +53,7 @@ This function should only modify configuration layer settings."
      html
      (javascript :variables node-add-modules-path t)
      markdown
+     nixos
      org
      osx
      python

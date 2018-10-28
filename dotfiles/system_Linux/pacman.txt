@@ -5,6 +5,7 @@ aspell-en
 atril
 audacity
 bat
+blueberry
 bluez-utils
 calibre
 clipmenu
@@ -22,7 +23,6 @@ exfat-utils
 fd
 feh
 firefox
-gnome-bluetooth
 gnome-themes-extra
 google-chrome
 graphicsmagick
@@ -35,6 +35,7 @@ intel-ucode
 iotop
 iperf3
 jre8-openjdk
+keybase
 kitty
 libva-intel-driver
 libva-utils
@@ -60,6 +61,7 @@ noto-fonts-emoji
 otf-font-awesome
 p7zip
 pass
+pavucontrol
 powerpill
 powertop
 pqiv
@@ -84,6 +86,7 @@ tor
 trizen
 ttf-fira-code
 ttf-hack
+upower
 vim
 vnstat
 xorg-server

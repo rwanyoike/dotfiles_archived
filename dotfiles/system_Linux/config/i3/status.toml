@@ -36,6 +36,7 @@ block = "sound"
 [[block]]
 block = "battery"
 interval = 10
+upower = true
 
 [[block]]
 block = "time"

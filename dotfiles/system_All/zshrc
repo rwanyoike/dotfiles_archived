@@ -9,6 +9,11 @@ if [[ "${TERM}" == "dumb" ]]; then
     return
 fi
 
+# See: https://github.com/NixOS/nix
+if [ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
+    source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
+fi
+
 if [[ -f ~/.zplug/init.zsh ]]; then
     source "${HOME}/.zplug/init.zsh"
 

@@ -6,6 +6,7 @@ with import <nixpkgs> {};
   exa
   exiftool
   fd
+  fdupes
   ffmpeg
   gdal
   gnupg

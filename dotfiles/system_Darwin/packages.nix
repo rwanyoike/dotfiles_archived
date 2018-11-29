@@ -11,6 +11,7 @@ with import <nixpkgs> {};
   gdal
   gnupg
   gnused
+  graphicsmagick
   htop
   iperf
   ispell
@@ -31,5 +32,6 @@ with import <nixpkgs> {};
   shellcheck
   tmux
   tree
+  watch
   yarn
 ]

@@ -2,13 +2,12 @@
 
 - hosts: "all"
   roles:
-    - { role: "spacemacs", tags: ["spacemacs"]}
-    - { role: "tmux", tags: ["tmux"]}
-    - { role: "zplug", tags: ["zplug"]}
-    - { role: "pyenv", tags: ["pyenv"]}
-    - { role: "rbenv", tags: ["rbenv"]}
-    - { role: "nodenv", tags: ["nodenv"]}
-    - { role: "goenv", tags: ["goenv"]}
-    - { role: "dotfiles", dotfiles_path: "dotfiles/system_All", tags: ["dotfiles"]}
-    - { role: "dotfiles", dotfiles_path: "dotfiles/system_{{ ansible_system }}", tags: ["dotfiles"]}
-    # - { role: "zsh", tags: ["zsh"]}
+    - { role: "spacemacs", tags: ["spacemacs"] }
+    - { role: "tmux", tags: ["tmux"] }
+    - { role: "zplug", tags: ["zplug"] }
+    - { role: "pyenv", tags: ["pyenv"] }
+    - { role: "rbenv", tags: ["rbenv"] }
+    - { role: "nodenv", tags: ["nodenv"] }
+    - { role: "goenv", tags: ["goenv"] }
+    - { role: "dotfiles", dotfiles_path: "dotfiles/system_All", tags: ["dotfiles"] }
+    - { role: "dotfiles", dotfiles_path: "dotfiles/system_{{ ansible_system }}", tags: ["dotfiles"] }

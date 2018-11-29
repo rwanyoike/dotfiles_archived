@@ -12,9 +12,6 @@ name = "awesome"
 cpu = " \uF3FD "
 
 [[block]]
-block = "uptime"
-
-[[block]]
 block = "memory"
 display_type = "memory"
 format_mem = "{Mup}%"

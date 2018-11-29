@@ -1,0 +1,11 @@
+ansible
+asciinema
+awscli
+flake8
+flake8-isort
+httpie
+ipython
+isort
+pip
+pwgen-passphrase
+youtube-dl

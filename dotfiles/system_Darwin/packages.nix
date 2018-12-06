@@ -9,6 +9,7 @@ with import <nixpkgs> {};
   fdupes
   ffmpeg
   gdal
+  git
   gnupg
   gnused
   graphicsmagick
@@ -16,6 +17,7 @@ with import <nixpkgs> {};
   iperf
   ispell
   jq
+  jrnl
   mediainfo
   mosh
   mpv
@@ -32,6 +34,7 @@ with import <nixpkgs> {};
   shellcheck
   tmux
   tree
+  vim
   watch
   yarn
 ]

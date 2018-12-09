@@ -80,11 +80,9 @@ sysstat
 systemd-boot-pacman-hook
 terminus-font
 testdisk
-tlp
 tmux
 tor
 trizen
-ttf-fira-code
 ttf-hack
 upower
 vim

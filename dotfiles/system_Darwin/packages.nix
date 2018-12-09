@@ -8,7 +8,6 @@ with import <nixpkgs> {};
   fd
   fdupes
   ffmpeg
-  gdal
   git
   gnupg
   gnused

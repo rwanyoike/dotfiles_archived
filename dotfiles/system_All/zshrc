@@ -4,7 +4,7 @@ if [ -f "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
 fi
 
 # See: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
-if [[ "${TERM}" =~ "^(dumb|linux)$" ]]; then
+if [[ "${TERM}" =~ ^(dumb|linux)$ ]]; then
     unsetopt zle
     # unsetopt prompt_cr
     # unsetopt prompt_subst

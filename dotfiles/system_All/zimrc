@@ -1,27 +1,27 @@
 # See: https://github.com/zimfw/zimfw
 
+zprompt_theme=lean
+
 zmodules=(
-     archive \
-     autosuggestions \
-     directory \
-     environment \
-     fasd \
-     git \
-     history \
-     input \
-     prompt \
-     spectrum \
-     utility \
-     syntax-highlighting \
-     history-substring-search \
-     completion
+    archive \
+    autosuggestions \
+    directory \
+    environment \
+    fasd \
+    git \
+    history \
+    input \
+    prompt \
+    spectrum \
+    utility \
+    syntax-highlighting \
+    history-substring-search \
+    completion
 )
 
 zhighlighters=(
-     main \
-     brackets \
-     cursor \
-     line
+    main \
+    brackets \
+    cursor \
+    line
 )
-
-zprompt_theme=lean

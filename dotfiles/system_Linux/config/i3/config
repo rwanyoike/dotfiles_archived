@@ -169,7 +169,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 # }}}
 
 # Autostart {{{
-exec_always --no-startup-id ~/Pictures/wallpaper.py
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 exec        --no-startup-id compton
 exec        --no-startup-id nm-applet
 exec        --no-startup-id redshift-gtk

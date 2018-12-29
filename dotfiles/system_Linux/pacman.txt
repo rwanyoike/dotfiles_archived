@@ -81,7 +81,6 @@ terminus-font
 testdisk
 tmux
 tor
-trizen
 ttf-hack
 upower
 vim

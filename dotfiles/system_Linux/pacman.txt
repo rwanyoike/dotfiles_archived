@@ -7,7 +7,6 @@ audacity
 bat
 blueberry
 bluez-utils
-calibre
 clipmenu
 clipnotify
 compton

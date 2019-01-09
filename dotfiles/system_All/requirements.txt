@@ -4,6 +4,7 @@ awscli
 flake8-isort
 httpie
 ipython
+jupyter
 pip
 pwgen-passphrase
 youtube-dl

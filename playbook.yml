@@ -3,6 +3,7 @@
 - hosts: "all"
   roles:
     - { role: "spacemacs", tags: ["spacemacs"] }
+    - { role: "vim_runtime", tags: ["vim_runtime"] }
     - { role: "tmux", tags: ["tmux"] }
     - { role: "zplug", tags: ["zplug"] }
     - { role: "pyenv", tags: ["pyenv"] }

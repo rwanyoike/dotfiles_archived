@@ -10,5 +10,5 @@
     - { role: "rbenv", tags: ["rbenv"] }
     - { role: "nodenv", tags: ["nodenv"] }
     - { role: "goenv", tags: ["goenv"] }
-    - { role: "dotfiles", dotfiles_path: "dotfiles/system_All", tags: ["dotfiles"] }
-    - { role: "dotfiles", dotfiles_path: "dotfiles/system_{{ ansible_system }}", tags: ["dotfiles"] }
+    - { role: "dotfiles", tags: ["dotfiles"], dotfiles_path: "dotfiles/system_All" }
+    - { role: "dotfiles", tags: ["dotfiles"], dotfiles_path: "dotfiles/system_{{ ansible_system }}" }

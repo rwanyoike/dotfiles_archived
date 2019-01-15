@@ -1,18 +1,18 @@
 ---
 
-- name: "({{ dotfiles_path }}) find the directories"
+- name: "({{ dotfiles_path }}) find the dirs"
   find:
     path: "{{ dotfiles_path }}"
     file_type: "directory"
     recurse: true
-  register: "dotfiles_directories"
+  register: "dotfiles_dirs"
   changed_when: false
 
-- name: "({{ dotfiles_path }}) make the directories"
+- name: "({{ dotfiles_path }}) make the dirs"
   file:
     path: "~/.{{ item.replace(dotfiles_path ~ '/', '') }}"
     state: "directory"
-  with_items: "{{ dotfiles_directories.files | map(attribute='path') | list }}"
+  loop: "{{ dotfiles_dirs.files | map(attribute='path') | list }}"
 
 - name: "({{ dotfiles_path }}) find the files"
   find:
@@ -27,4 +27,4 @@
     src: "~/.dotfiles/{{ item }}"
     dest: "~/.{{ item.replace(dotfiles_path ~ '/', '') }}"
     state: "link"
-  with_items: "{{ dotfiles_files.files | map(attribute='path') | list }}"
+  loop: "{{ dotfiles_files.files | map(attribute='path') | list }}"

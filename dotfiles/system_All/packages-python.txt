@@ -1,6 +1,5 @@
 ansible
 asciinema
-awscli
 flake8-isort
 httpie
 ipython

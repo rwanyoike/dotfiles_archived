@@ -41,7 +41,8 @@ nix-env --install --file ${HOME}/.packages-nixpkgs.nix
 ### Linux (Arch)
 
 ```shell
-< ${HOME}/.packages-pacman.txt | xargs echo sudo pacman -S
+< ${HOME}/.packages-pacman.txt | sudo pacman -S -
+< ${HOME}/.packages-aur.txt | yay -S -
 ```
 
 ### Agnostic

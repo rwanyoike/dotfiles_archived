@@ -1,5 +1,4 @@
 alsa-utils
-android-sdk-platform-tools
 arch-wiki-docs
 aspell-en
 atril
@@ -14,7 +13,6 @@ darkhttpd
 deadbeef
 dialog
 dmidecode
-downgrade
 dunst
 emacs
 exa
@@ -23,18 +21,14 @@ fd
 feh
 firefox
 gnome-themes-extra
-google-chrome
 graphicsmagick
-hfsprogs
 htop
 i3-gaps
 i3lock
-i3status-rust-git
 intel-ucode
 iotop
 iperf3
 jre8-openjdk
-keybase
 kitty
 libva-intel-driver
 libva-utils
@@ -61,9 +55,7 @@ otf-font-awesome
 p7zip
 pass
 pavucontrol
-powerpill
 powertop
-pqiv
 progress
 pulseaudio-alsa
 ranger
@@ -76,7 +68,6 @@ shellcheck
 smartmontools
 sshfs
 sysstat
-systemd-boot-pacman-hook
 terminus-font
 testdisk
 tmux

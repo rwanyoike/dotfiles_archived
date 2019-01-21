@@ -1,0 +1,8 @@
+android-sdk-platform-tools
+downgrade
+google-chrome
+i3status-rust-git
+keybase-bin
+powerpill
+pqiv
+systemd-boot-pacman-hook

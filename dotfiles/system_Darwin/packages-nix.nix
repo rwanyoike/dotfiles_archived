@@ -2,6 +2,7 @@ with import <nixpkgs> {};
 [ aria2
   bat
   coreutils
+  cowsay
   emacs
   exa
   exiftool
@@ -12,10 +13,13 @@ with import <nixpkgs> {};
   gnupg
   gnused
   graphicsmagick
+  hexyl
   htop
+  ipcalc
   iperf
   ispell
   jq
+  jre
   jrnl
   mediainfo
   mosh
@@ -35,5 +39,6 @@ with import <nixpkgs> {};
   tree
   vim
   watch
+  wireguard-tools
   yarn
 ]

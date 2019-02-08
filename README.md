@@ -31,22 +31,6 @@ chsh --shell $(which zsh) # ┌(ಠ‿ಠ)┘
 
 ## Post Install
 
-### Darwin
-
-```shell
-brew bundle install --file=${HOME}/.packages-brewfile.txt
-nix-env --install --file ${HOME}/.packages-nixpkgs.nix
-```
-
-### Linux (Arch)
-
-```shell
-< ${HOME}/.packages-pacman.txt | sudo pacman -S -
-< ${HOME}/.packages-aur.txt | yay -S -
-```
-
-### Agnostic
-
 ```shell
 pyenv install x.x.x && pyenv global x.x.x
 rbenv install x.x.x && rbenv global x.x.x
@@ -56,5 +40,19 @@ goenv install x.x.x && goenv global x.x.x
 
 ```shell
 pip install --requirement ${HOME}/.packages-python.txt
-< ${HOME}/.packages-nodejs.txt | xargs yarn global add
+< ${HOME}/.packages-node.txt | xargs yarn global add
+```
+
+### Darwin
+
+```shell
+brew bundle install --file=${HOME}/.packages-brew.txt
+nix-env --install --file ${HOME}/.packages-nix.nix
+```
+
+### Linux (Arch)
+
+```shell
+< ${HOME}/.packages-pacman.txt | sudo pacman -S -
+< ${HOME}/.packages-aur.txt | yay -S -
 ```

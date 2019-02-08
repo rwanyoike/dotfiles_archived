@@ -30,6 +30,7 @@ let
       nixpkgs.mtr
       nixpkgs.ncdu
       nixpkgs.neofetch
+      nixpkgs.m-cli
       nixpkgs.nix
       nixpkgs.nmap
       nixpkgs.p7zip
@@ -37,6 +38,7 @@ let
       nixpkgs.peco
       nixpkgs.postgresql
       nixpkgs.rclone
+      nixpkgs.reattach-to-user-namespace
       nixpkgs.ripgrep
       nixpkgs.shellcheck
       nixpkgs.tmux

@@ -16,7 +16,7 @@ Clone the repository:
 git clone https://github.com/rwanyoike/dotfiles ${HOME}/.dotfiles
 ```
 
-Break it down 💃:
+Break it down:
 
 ```shell
 pip install --upgrade ansible
@@ -50,7 +50,7 @@ brew bundle install --file=${HOME}/.packages-brew.txt
 nix-env --install --file ${HOME}/.packages-nix.nix
 ```
 
-### Linux (Arch)
+### (Arch) Linux
 
 ```shell
 < ${HOME}/.packages-pacman.txt | sudo pacman -S -

@@ -1,52 +1,52 @@
 let
-  nixpkgs = import <nixpkgs> {};
+  pkgs = import <nixpkgs> {};
   default =
     [
-      nixpkgs.aria2
-      nixpkgs.bat
-      nixpkgs.coreutils
-      nixpkgs.cowsay
-      nixpkgs.emacs
-      nixpkgs.exa
-      nixpkgs.exiftool
-      nixpkgs.fd
-      nixpkgs.fdupes
-      nixpkgs.ffmpeg
-      nixpkgs.git
-      nixpkgs.gnupg
-      nixpkgs.gnused
-      nixpkgs.graphicsmagick
-      nixpkgs.hexyl
-      nixpkgs.htop
-      nixpkgs.ipcalc
-      nixpkgs.iperf
-      nixpkgs.ispell
-      nixpkgs.jq
-      nixpkgs.jre
-      nixpkgs.jrnl
-      nixpkgs.mediainfo
-      nixpkgs.mosh
-      nixpkgs.mpv
-      nixpkgs.mtr
-      nixpkgs.ncdu
-      nixpkgs.neofetch
-      nixpkgs.m-cli
-      nixpkgs.nix
-      nixpkgs.nmap
-      nixpkgs.p7zip
-      nixpkgs.pass
-      nixpkgs.peco
-      nixpkgs.postgresql
-      nixpkgs.rclone
-      nixpkgs.reattach-to-user-namespace
-      nixpkgs.ripgrep
-      nixpkgs.shellcheck
-      nixpkgs.tmux
-      nixpkgs.tree
-      nixpkgs.vim
-      nixpkgs.watch
-      nixpkgs.wireguard-tools
-      nixpkgs.yarn
+      pkgs.aria2
+      pkgs.bat
+      pkgs.cacert # installed with nix
+      pkgs.coreutils
+      pkgs.cowsay
+      pkgs.emacs
+      pkgs.exa
+      pkgs.exiftool
+      pkgs.fd
+      pkgs.fdupes
+      pkgs.ffmpeg
+      pkgs.git
+      pkgs.gnupg
+      pkgs.gnused
+      pkgs.graphicsmagick
+      pkgs.hexyl
+      pkgs.htop
+      pkgs.ipcalc
+      pkgs.iperf
+      pkgs.ispell
+      pkgs.jq
+      pkgs.jrnl
+      pkgs.mediainfo
+      pkgs.mosh
+      pkgs.mpv
+      pkgs.mtr
+      pkgs.ncdu
+      pkgs.neofetch
+      pkgs.m-cli
+      pkgs.nix # installed with nix
+      pkgs.nmap
+      pkgs.p7zip
+      pkgs.pass
+      pkgs.peco
+      pkgs.postgresql
+      pkgs.rclone
+      pkgs.reattach-to-user-namespace
+      pkgs.ripgrep
+      pkgs.shellcheck
+      pkgs.tmux
+      pkgs.tree
+      pkgs.vim
+      pkgs.watch
+      pkgs.wireguard-tools
+      pkgs.yarn
     ];
 in
   default

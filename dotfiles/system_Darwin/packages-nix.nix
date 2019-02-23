@@ -24,6 +24,7 @@ let
       pkgs.ispell
       pkgs.jq
       pkgs.jrnl
+      pkgs.lolcat
       pkgs.mediainfo
       pkgs.mosh
       pkgs.mpv
@@ -34,6 +35,7 @@ let
       pkgs.nix # installed with nix
       pkgs.nmap
       pkgs.p7zip
+      pkgs.packer
       pkgs.pass
       pkgs.peco
       pkgs.postgresql

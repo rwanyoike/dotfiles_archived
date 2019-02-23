@@ -51,7 +51,7 @@ This function should only modify configuration layer settings."
      git
      helm
      html
-     (javascript :variables node-add-modules-path t)
+     javascript
      markdown
      nixos
      org
@@ -456,9 +456,13 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (setq exec-path-from-shell-check-startup-files nil)
-  (setq too-hardcore-backspace t)
-  (setq too-hardcore-return t)
+  (setq-default exec-path-from-shell-check-startup-files nil)
+  (setq-default too-hardcore-backspace t)
+  (setq-default too-hardcore-return t)
+  (setq-default node-add-modules-path t)
+  (setq-default javascript-fmt-tool 'prettier)
+  (setq-default json-fmt-tool 'prettier)
+  (setq-default web-fmt-tool 'prettier)
   )
 
 (defun dotspacemacs/user-load ()
@@ -475,7 +479,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (spacemacs|do-after-display-system-init
-   (setq powerline-default-separator 'utf-8)
+   (setq-default powerline-default-separator 'utf-8)
    (spaceline-compile)) ; https://github.com/syl20bnr/spacemacs/issues/6027
   (editorconfig-mode t)
   (spacemacs|diminish editorconfig-mode)
@@ -483,6 +487,9 @@ before packages are loaded."
   (spacemacs|diminish global-disable-mouse-mode)
   (global-hardcore-mode)
   (spacemacs|diminish hardcore-mode)
+  (setq-default js-indent-level 2)
+  (setq-default css-indent-offset 2)
+  (setq-default standard-indent 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

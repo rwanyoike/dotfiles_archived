@@ -4,6 +4,7 @@ flake8-isort
 httpie
 ipython
 jupyter
+pdbpp
 pip
 pwgen-passphrase
 youtube-dl

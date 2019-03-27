@@ -24,10 +24,6 @@ if [ -f "${HOME}/.zplug/init.zsh" ]; then
     export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
     zplug "djui/alias-tips"
 
-    PREZTO_MODULES=(node python ruby)
-    zplug "sorin-ionescu/prezto", \
-        use:"modules/{${(j:,:)PREZTO_MODULES}}/init.zsh"
-
     zplug "${HOME}/.zsh", \
         from:local
 

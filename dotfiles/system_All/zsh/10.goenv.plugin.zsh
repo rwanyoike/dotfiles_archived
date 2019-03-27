@@ -1,5 +1,7 @@
 # See: https://github.com/syndbg/goenv
 
+export GOENV_GOPATH_PREFIX="${HOME}/SRC/golang"
 export PATH="${HOME}/.goenv/bin:${PATH}"
-export GOPATH="${HOME}/Documents/SRC/golang"
 eval "$(goenv init -)"
+export PATH="${GOROOT}/bin:${PATH}"
+export PATH="${GOPATH}/bin:${PATH}"

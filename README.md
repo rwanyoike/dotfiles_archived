@@ -1,8 +1,8 @@
-# dotfiles
+<h1 align="center">
+  <img src="https://i.imgur.com/rEM1ASC.png" alt="dotfiles">
+</h1>
 
-> Personal configurations. ಠ_ರೃ
-
-There's no place like `${HOME}`.
+> There's no place like `${HOME}`. ಠ_ರೃ
 
 ## Requirements
 
@@ -13,7 +13,7 @@ None
 Clone the repository:
 
 ```shell
-git clone https://github.com/rwanyoike/dotfiles ${HOME}/.dotfiles
+git clone https://github.com/rwanyoike/dotfiles "${HOME}/.dotfiles"
 ```
 
 Break it down:
@@ -25,33 +25,33 @@ bash "${HOME}/.dotfiles/provision.sh"
 Set your default shell:
 
 ```shell
-chsh --shell $(which zsh) # ┌(ಠ‿ಠ)┘
+chsh --shell "$(which zsh)" # ┌(ಠ‿ಠ)┘
 ```
 
 ## Post Install
 
+### All Systems
+
 ```shell
-pyenv install x.x.x && pyenv global x.x.x
-rbenv install x.x.x && rbenv global x.x.x
-nodenv install x.x.x && nodenv global x.x.x
-goenv install x.x.x && goenv global x.x.x
+# pyenv|rbenv|nodenv|goenv install x.x.x
+# pyenv|rbenv|nodenv|goenv global x.x.x
 ```
 
 ```shell
-pip install --requirement ${HOME}/.packages-python.txt
-< ${HOME}/.packages-node.txt | xargs yarn global add
+pip install --requirement "${HOME}/.packages-python.txt"
+< "${HOME}/.packages-node.txt" | xargs yarn global add
 ```
 
-### Darwin
+### macOS
 
 ```shell
-brew bundle install --file=${HOME}/.packages-brew.txt
-nix-env --install --file ${HOME}/.packages-nix.nix
+brew bundle install --file="${HOME}/.packages-brew.txt"
+nix-env --install --file "${HOME}/.packages-nix.nix"
 ```
 
 ### (Arch) Linux
 
 ```shell
-< ${HOME}/.packages-pacman.txt | sudo pacman -S -
-< ${HOME}/.packages-aur.txt | yay -S -
+< "${HOME}/.packages-pacman.txt" | sudo pacman -S -
+< "${HOME}/.packages-aur.txt" | yay -S -
 ```

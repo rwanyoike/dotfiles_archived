@@ -1,5 +1,6 @@
 ansible
 asciinema
+flake8
 flake8-isort
 httpie
 ipython
@@ -7,4 +8,5 @@ jupyter
 pdbpp
 pip
 pwgen-passphrase
+pylint
 youtube-dl

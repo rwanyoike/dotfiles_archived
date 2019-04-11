@@ -7,7 +7,6 @@ let
       pkgs.cacert # installed with nix
       pkgs.coreutils
       pkgs.cowsay
-      pkgs.emacs
       pkgs.exa
       pkgs.exiftool
       pkgs.fd
@@ -27,7 +26,6 @@ let
       pkgs.lolcat
       pkgs.mediainfo
       pkgs.mosh
-      pkgs.mpv
       pkgs.mtr
       pkgs.ncdu
       pkgs.neofetch

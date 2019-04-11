@@ -6,7 +6,7 @@ There's no place like `${HOME}`.
 
 ## Requirements
 
-- A Python environment
+None
 
 ## Installation
 
@@ -19,8 +19,7 @@ git clone https://github.com/rwanyoike/dotfiles ${HOME}/.dotfiles
 Break it down:
 
 ```shell
-pip install --upgrade ansible
-ansible-playbook --inventory=${HOME}/.dotfiles/hosts ${HOME}/.dotfiles/playbook.yml
+bash "${HOME}/.dotfiles/provision.sh"
 ```
 
 Set your default shell:

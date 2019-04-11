@@ -1,6 +1,0 @@
----
-
-- name: "clone the zplug/zplug repository"
-  git:
-    repo: "https://github.com/zplug/zplug"
-    dest: "~/.zplug"

@@ -3,6 +3,7 @@ let
   default =
     [
       pkgs.aria2
+      pkgs.aspell
       pkgs.bat
       pkgs.cacert # installed with nix
       pkgs.coreutils
@@ -12,6 +13,7 @@ let
       pkgs.fd
       pkgs.fdupes
       pkgs.ffmpeg
+      pkgs.figlet
       pkgs.git
       pkgs.gnupg
       pkgs.gnused
@@ -19,24 +21,23 @@ let
       pkgs.hexyl
       pkgs.htop
       pkgs.ipcalc
-      pkgs.iperf
-      pkgs.ispell
+      pkgs.iperf3
       pkgs.jq
       pkgs.jrnl
       pkgs.lolcat
+      pkgs.m-cli
       pkgs.mediainfo
       pkgs.mosh
       pkgs.mtr
       pkgs.ncdu
       pkgs.neofetch
-      pkgs.m-cli
       pkgs.nix # installed with nix
       pkgs.nmap
       pkgs.p7zip
       pkgs.packer
       pkgs.pass
       pkgs.peco
-      pkgs.postgresql
+      pkgs.ranger
       pkgs.rclone
       pkgs.reattach-to-user-namespace
       pkgs.ripgrep

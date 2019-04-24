@@ -6,7 +6,8 @@
 
 ## Requirements
 
-None
+- `git`
+- `zsh`
 
 ## Installation
 
@@ -39,7 +40,7 @@ chsh --shell "$(which zsh)" # ┌(ಠ‿ಠ)┘
 
 ```shell
 pip install --requirement "${HOME}/.packages-python.txt"
-< "${HOME}/.packages-node.txt" | xargs yarn global add
+xargs yarn global add < "${HOME}/.packages-node.txt"
 ```
 
 ### macOS
@@ -52,6 +53,6 @@ nix-env --install --file "${HOME}/.packages-nix.nix"
 ### (Arch) Linux
 
 ```shell
-< "${HOME}/.packages-pacman.txt" | sudo pacman -S -
-< "${HOME}/.packages-aur.txt" | yay -S -
+sudo pacman -S --needed - < "${HOME}/.packages-pacman.txt"
+yay -S - < "${HOME}/.packages-aur.txt"
 ```

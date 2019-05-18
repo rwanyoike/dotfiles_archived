@@ -47,7 +47,7 @@ xargs yarn global add < "${HOME}/.packages-node.txt"
 
 ```shell
 brew bundle install --file="${HOME}/.packages-brew.txt"
-nix-env --install --file "${HOME}/.packages-nix.nix"
+nix-env --install --file "${HOME}/.packages-nixpkgs.nix"
 ```
 
 ### (Arch) Linux

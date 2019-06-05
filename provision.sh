@@ -5,7 +5,7 @@ set -o nounset
 
 repo_path="$(cd "${BASH_SOURCE[0]%/*}" && pwd)"
 
-ui_reset=$(tput sgr0)
+ui_sgr0=$(tput sgr0)
 ui_002=$(tput setaf 2)
 ui_003=$(tput setaf 3)
 ui_bold=$(tput bold)
@@ -15,13 +15,13 @@ ui_bold=$(tput bold)
 function dotfiles_log() {
   message="${1}"
 
-  printf "${ui_bold}${ui_002}%s${ui_reset}\n" "${message}"
+  printf "${ui_bold}${ui_002}%s${ui_sgr0}\n" "${message}"
 }
 
 function dotfiles_exec() {
   cmd="${1}"
 
-  printf "${ui_003}$ %s${ui_reset}\n" "${cmd}"
+  printf "${ui_003}$ %s${ui_sgr0}\n" "${cmd}"
   eval "${cmd}"
 }
 

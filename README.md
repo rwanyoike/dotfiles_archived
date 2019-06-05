@@ -53,6 +53,8 @@ nix-env --install --file "${HOME}/.packages-nixpkgs.nix"
 ### (Arch) Linux
 
 ```shell
+sudo localectl set-locale en_US.UTF-8
+sudo timedatectl set-ntp true
 sudo pacman -S --needed - < "${HOME}/.packages-pacman.txt"
 yay -S - < "${HOME}/.packages-aur.txt"
 ```

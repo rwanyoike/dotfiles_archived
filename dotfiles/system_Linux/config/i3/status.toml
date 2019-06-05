@@ -29,6 +29,7 @@ device = "wlp1s0"
 
 [[block]]
 block = "sound"
+driver = "alsa"
 
 [[block]]
 block = "battery"

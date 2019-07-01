@@ -1,8 +1,6 @@
 clipman
 downgrade
-google-chrome
 i3status-rust-git
-keybase-bin
 powerpill
 pqiv
 redshift-wlr-gamma-control-git

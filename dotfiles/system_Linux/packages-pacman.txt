@@ -10,6 +10,7 @@ clipmenu
 clipnotify
 compton
 darkhttpd
+breeze
 deadbeef
 dialog
 dmidecode
@@ -58,6 +59,7 @@ pavucontrol
 powertop
 progress
 pulseaudio-alsa
+qt5ct
 ranger
 rclone
 redshift

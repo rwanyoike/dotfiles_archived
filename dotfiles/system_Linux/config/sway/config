@@ -1,0 +1,203 @@
+# Sway config file
+#
+# Read `man 5 sway` for a complete reference!
+
+# Variables {{{
+set $mod Mod4
+set $font pango:Monospace 12
+set $term kitty
+set $menu rofi -show run
+
+set $ws1 "01 "
+set $ws2 "02 "
+set $ws3 "03 "
+set $ws4 "04 "
+set $ws5 "05 "
+set $ws6 "06 "
+set $ws7 "07 "
+set $ws8 "08 "
+set $ws9 "09 "
+set $wsX "10 "
+
+set $base00 #1d2021
+set $base01 #3c3836
+set $base02 #504945
+set $base03 #665c54
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #fb4934
+set $base09 #fe8019
+set $base0A #fabd2f
+set $base0B #b8bb26
+set $base0C #8ec07c
+set $base0D #83a598
+set $base0E #d3869b
+set $base0F #d65d0e
+# }}}
+
+# Basic Keybindings {{{
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning \
+  -m 'You pressed the exit shortcut. Do you really want to exit Sway? This will end your Wayland session.' \
+  -b 'Yes, exit Sway' 'swaymsg exit'
+bindsym $mod+Shift+q kill
+
+bindsym $mod+Return exec $term
+bindsym $mod+d      exec $menu
+# }}}
+
+# Window Movement (excluding workspaces) {{{
+# move your focus around
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Right focus right
+
+# _move_ the focused window
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+# layout splitting
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
+# container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# focus fullscreen
+bindsym $mod+f fullscreen
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# swap focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# move focus to the parent
+bindsym $mod+a focus parent
+
+# resizing containers
+mode "resize" {
+  # left will shrink the containers width
+  # right will grow the containers width
+  # up will shrink the containers height
+  # down will grow the containers height
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+
+  # return to default mode
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+# }}}
+
+# Workspaces (including window movement) {{{
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+# }}}
+
+# Audio Controls {{{
+bindsym XF86AudioRaiseVolume exec amixer set Master 2%+
+bindsym XF86AudioLowerVolume exec amixer set Master 2%-
+bindsym XF86AudioMute        exec amixer set Master toggle
+# }}}
+
+# Backlight Controls {{{
+bindsym XF86MonBrightnessUp   exec light -A 2
+bindsym XF86MonBrightnessDown exec light -U 2
+# }}}
+
+# Other Keybindings {{{
+bindsym --release Print exec grim -g \"$(slurp)\" - | wl-copy
+bindsym $mod+Shift+v    exec clipman -s --selector=rofi
+# }}}
+
+# Colors and Customization {{{
+font $font
+floating_modifier $mod normal
+default_border pixel 2
+
+# class │ border │ background │ text │ indicator │ child_border
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
+# }}}
+
+# Gaps {{{
+gaps inner 10
+gaps outer 0
+# }}}
+
+# Autostart {{{
+exec clipman -d
+exec mako
+exec redshift
+exec swayidle -w \
+  timeout 300 'swaylock -f -c 1d2021' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 1d2021'
+# }}}
+
+bar {
+  status_command i3status-rs ~/.config/sway/status.toml
+  height 28
+
+  colors {
+    background $base00
+    separator  $base01
+    statusline $base04
+
+    # class │ border │ background │ text
+    focused_workspace   $base05 $base0D $base00
+    active_workspace    $base05 $base03 $base00
+    inactive_workspace  $base03 $base01 $base05
+    urgent_workspace    $base08 $base08 $base00
+    binding_mode        $base00 $base0A $base00
+  }
+}
+
+output * {
+  background ~/Pictures/wallpaper.jpg fill
+}
+
+input * {
+  xkb_options caps:escape
+
+  drag disabled
+  dwt enabled
+  natural_scroll enabled
+  tap enabled
+}

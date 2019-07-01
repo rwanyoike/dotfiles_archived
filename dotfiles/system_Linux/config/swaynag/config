@@ -1,0 +1,7 @@
+font=Monospace 10
+
+[warning]
+background=fabd2f
+
+[error]
+background=fb4934

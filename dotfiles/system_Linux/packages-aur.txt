@@ -1,8 +1,9 @@
-android-sdk-platform-tools
+clipman
 downgrade
 google-chrome
 i3status-rust-git
 keybase-bin
 powerpill
 pqiv
-systemd-boot-pacman-hook
+redshift-wlr-gamma-control-git
+ttf-font-awesome-4

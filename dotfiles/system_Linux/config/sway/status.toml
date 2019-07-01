@@ -23,18 +23,13 @@ format_mem = "{Mup}%"
 format_swap = "{SUp}%"
 
 [[block]]
-block = "load"
-format = "{1m} {5m}"
-interval = 2
-
-[[block]]
 block = "cpu"
 interval = 2
 
 [[block]]
 block = "net"
 interval = 2
-device = "wlp1s0"
+device = "wlp59s0"
 graph_down = true
 ssid = true
 
@@ -46,7 +41,7 @@ driver = "alsa"
 block = "battery"
 interval = 10
 driver = "upower"
-format = "{percentage}% ({power}W)"
+format = "{percentage}% ({power}W) {time}"
 
 [[block]]
 block = "time"

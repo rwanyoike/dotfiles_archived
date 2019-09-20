@@ -75,6 +75,7 @@ bindsym $mod+f fullscreen
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+s sticky toggle
 # swap focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 # move focus to the parent
@@ -138,7 +139,7 @@ bindsym XF86MonBrightnessDown exec light -U 2
 
 # Other Keybindings {{{
 bindsym --release Print exec grim -g \"$(slurp)\" - | wl-copy
-bindsym $mod+Shift+v    exec clipman -s --selector=rofi
+bindsym $mod+Shift+v    exec clipman pick --tool=rofi
 # }}}
 
 # Colors and Customization {{{
@@ -161,19 +162,25 @@ gaps outer 0
 # }}}
 
 # Autostart {{{
-exec clipman -d
-exec mako
-exec redshift
-exec swayidle -w \
-  timeout 300 'swaylock -f -c 1d2021' \
-  timeout 600 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 1d2021'
+exec_always {
+  dconf write /org/gtk/settings/file-chooser/sort-directories-first true
+}
+
+exec {
+  mako
+  redshift
+  swayidle -w \
+    timeout 300 'swaylock -f -c 1d2021' \
+    timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 1d2021'
+  wl-paste -t text --watch clipman store
+}
 # }}}
 
 bar {
   status_command i3status-rs ~/.config/sway/status.toml
-  height 28
+  height 29
 
   colors {
     background $base00
@@ -195,7 +202,6 @@ output * {
 
 input * {
   xkb_options caps:escape
-
   drag disabled
   dwt enabled
   natural_scroll enabled

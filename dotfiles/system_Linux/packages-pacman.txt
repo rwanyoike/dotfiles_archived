@@ -3,9 +3,11 @@ android-tools
 android-udev
 arch-install-scripts
 arch-wiki-docs
+aria2
 aspell-en
 audacity
 bat
+bind-tools
 blueberry
 bluez-utils
 bookworm
@@ -38,6 +40,7 @@ jq
 jre8-openjdk-headless
 keychain
 kitty
+libreoffice-fresh
 libva-intel-driver
 libva-utils
 light

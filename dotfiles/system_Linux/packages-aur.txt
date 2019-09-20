@@ -1,7 +1,8 @@
 clipman
 downgrade
 i3status-rust-git
-powerpill
 pqiv
 redshift-wlr-gamma-control-git
+refind-theme-ambience-black-git
 ttf-font-awesome-4
+yay

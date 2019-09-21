@@ -1,12 +1,12 @@
-# Sway config file
-#
 # Read `man 5 sway` for a complete reference!
 
+include ~/.config/sway/colorscheme
+
 # Variables {{{
-set $mod Mod4
+set $mod  Mod4
 set $font pango:Monospace 12
-set $term kitty
 set $menu rofi -show run
+set $term kitty
 
 set $ws1 "01 "
 set $ws2 "02 "
@@ -18,23 +18,6 @@ set $ws7 "07 "
 set $ws8 "08 "
 set $ws9 "09 "
 set $wsX "10 "
-
-set $base00 #1d2021
-set $base01 #3c3836
-set $base02 #504945
-set $base03 #665c54
-set $base04 #bdae93
-set $base05 #d5c4a1
-set $base06 #ebdbb2
-set $base07 #fbf1c7
-set $base08 #fb4934
-set $base09 #fe8019
-set $base0A #fabd2f
-set $base0B #b8bb26
-set $base0C #8ec07c
-set $base0D #83a598
-set $base0E #d3869b
-set $base0F #d65d0e
 # }}}
 
 # Basic Keybindings {{{
@@ -61,25 +44,25 @@ bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# layout splitting
-bindsym $mod+h splith
-bindsym $mod+v splitv
-
 # container layout
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+# layout splitting
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
 # focus fullscreen
 bindsym $mod+f fullscreen
 
-# toggle tiling / floating
+# toggle tiling/floating
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+Shift+s sticky toggle
-# swap focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+s     sticky toggle
+# swap focus between tiling/floating windows
+bindsym $mod+space       focus mode_toggle
 # move focus to the parent
-bindsym $mod+a focus parent
+bindsym $mod+a           focus parent
 
 # resizing containers
 mode "resize" {
@@ -87,9 +70,9 @@ mode "resize" {
   # right will grow the containers width
   # up will shrink the containers height
   # down will grow the containers height
-  bindsym Left resize shrink width 10 px or 10 ppt
-  bindsym Down resize grow height 10 px or 10 ppt
-  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Left  resize shrink width 10 px or 10 ppt
+  bindsym Down  resize grow height 10 px or 10 ppt
+  bindsym Up    resize shrink height 10 px or 10 ppt
   bindsym Right resize grow width 10 px or 10 ppt
 
   # return to default mode
@@ -97,6 +80,7 @@ mode "resize" {
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
 }
+
 bindsym $mod+r mode "resize"
 # }}}
 
@@ -145,18 +129,17 @@ bindsym $mod+Shift+v    exec clipman pick --tool=rofi
 # Colors and Customization {{{
 font $font
 floating_modifier $mod normal
-default_border pixel 2
+default_border pixel   2
 
+# Ref: https://github.com/rkubosz/base16-sway
 # class │ border │ background │ text │ indicator │ child_border
-client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused          $base05 $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
 client.unfocused        $base01 $base00 $base05 $base01 $base01
 client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
-# }}}
 
-# Gaps {{{
 gaps inner 10
 gaps outer 0
 # }}}
@@ -174,7 +157,7 @@ exec {
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 1d2021'
-  # wl-paste -t text --watch clipman store
+    # wl-paste -t text --watch clipman store
 }
 # }}}
 
@@ -183,6 +166,7 @@ bar {
   height 29
 
   colors {
+    # Ref: https://github.com/rkubosz/base16-sway
     background $base00
     separator  $base01
     statusline $base04
@@ -210,10 +194,4 @@ input * {
   tap enabled
 }
 
-output eDP-1 {
-  pos 0 0
-}
-
-input 1:1:AT_Translated_Set_2_keyboard {
-  xkb_model chromebook_ralt
-}
+include ~/.config/sway/hosts/`hostname`

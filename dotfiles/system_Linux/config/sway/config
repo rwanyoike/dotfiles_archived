@@ -174,7 +174,7 @@ exec {
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 1d2021'
-  wl-paste -t text --watch clipman store
+  # wl-paste -t text --watch clipman store
 }
 # }}}
 
@@ -202,8 +202,18 @@ output * {
 
 input * {
   xkb_options caps:escape
+
   drag disabled
   dwt enabled
+  middle_emulation disabled
   natural_scroll enabled
   tap enabled
+}
+
+output eDP-1 {
+  pos 0 0
+}
+
+input 1:1:AT_Translated_Set_2_keyboard {
+  xkb_model chromebook_ralt
 }

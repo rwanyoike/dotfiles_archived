@@ -30,8 +30,6 @@ interval = 2
 block = "net"
 interval = 2
 device = "wlp59s0"
-graph_down = true
-ssid = true
 
 [[block]]
 block = "sound"
@@ -41,7 +39,7 @@ driver = "alsa"
 block = "battery"
 interval = 10
 driver = "upower"
-format = "{percentage}% ({power}W) {time}"
+format = "{percentage}% ({power}W)"
 
 [[block]]
 block = "time"

@@ -51,6 +51,8 @@ lsof
 lxappearance
 macchanger
 mako
+man-db
+man-pages
 mediainfo
 minicom
 mlocate
@@ -71,6 +73,7 @@ p7zip
 packer
 pass
 pavucontrol
+perl-rename
 postgresql-libs
 powertop
 progress

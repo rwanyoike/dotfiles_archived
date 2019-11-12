@@ -122,7 +122,8 @@ bindsym XF86MonBrightnessDown exec light -U 2
 # }}}
 
 # Other Keybindings {{{
-bindsym --release Print exec grim -g \"$(slurp)\" - | wl-copy
+bindsym --release Print exec grim -g \"$(slurp -d)\" - | wl-copy
+bindsym $mod+Print      exec grim - | wl-copy
 bindsym $mod+Shift+v    exec clipman pick --tool=rofi
 # }}}
 

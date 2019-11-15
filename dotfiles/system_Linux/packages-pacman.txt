@@ -67,7 +67,6 @@ networkmanager
 nfs-utils
 nmap
 noto-fonts-cjk
-noto-fonts-emoji
 obs-studio
 p7zip
 packer
@@ -99,8 +98,7 @@ tlp
 tmux
 transmission-gtk
 ttf-hack
-udisks2
-upower
+ttf-joypixels
 vagrant
 vim
 vinagre

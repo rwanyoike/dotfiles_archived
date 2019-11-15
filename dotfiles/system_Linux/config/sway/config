@@ -4,7 +4,7 @@ include ~/.config/sway/colorscheme
 
 # Variables {{{
 set $mod  Mod4
-set $font pango:Monospace 12
+set $font Monospace 12
 set $menu rofi -show run
 set $term kitty
 

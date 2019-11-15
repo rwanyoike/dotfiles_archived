@@ -12,7 +12,7 @@ ui_bold=$(tput bold)
 
 # -----------------------------------------------------------------------------
 
-function dotfiles_log() {
+function dotfiles_print() {
   message="${1}"
 
   printf "${ui_bold}${ui_002}%s${ui_sgr0}\n" "${message}"
@@ -25,13 +25,13 @@ function dotfiles_exec() {
   eval "${cmd}"
 }
 
-function dotfiles_gh() {
+function dotfiles_git() {
   repo="${1}"
   dest="${2}"
   version="${3:-master}"
 
   if [[ ! -d "${dest}" ]]; then
-    dotfiles_exec "git clone https://github.com/${repo} ${dest}"
+    dotfiles_exec "git clone ${repo} ${dest}"
   fi
 
   pushd "${dest}" >/dev/null 2>&1
@@ -40,7 +40,7 @@ function dotfiles_gh() {
   popd >/dev/null 2>&1
 }
 
-function dotfiles_ln() {
+function dotfiles_link() {
   src="${1}"
   dest="${2}"
 
@@ -57,58 +57,58 @@ function dotfiles_mkdir() {
   fi
 }
 
-function dotfiles_link() {
+function dotfiles_init() {
   files="${1}"
 
   find "${files}" -type f | while read -r "fname"; do
     rel_path="${fname//${files}\//.}"
     dotfiles_mkdir "${HOME}/$(dirname "${rel_path}")"
-    dotfiles_ln "$fname" "${HOME}/${rel_path}"
+    dotfiles_link "$fname" "${HOME}/${rel_path}"
   done
 }
 
 # -----------------------------------------------------------------------------
 
 # spacemacs
-dotfiles_log "--> spacemacs"
-dotfiles_gh "syl20bnr/spacemacs" "${HOME}/.emacs.d" "develop"
+dotfiles_print "--> spacemacs"
+dotfiles_git "https://github.com/syl20bnr/spacemacs" "${HOME}/.emacs.d" "develop"
 
 # vimrc
-dotfiles_log "--> vimrc"
-dotfiles_gh "amix/vimrc" "${HOME}/.vim_runtime"
+dotfiles_print "--> vimrc"
+dotfiles_git "https://github.com/amix/vimrc" "${HOME}/.vim_runtime"
 
 # tmux
-dotfiles_log "--> tmux"
-dotfiles_gh "gpakosz/.tmux" "${HOME}/.tmux"
-dotfiles_ln "${HOME}/.tmux/.tmux.conf" "${HOME}/.tmux.conf"
+dotfiles_print "--> tmux"
+dotfiles_git "https://github.com/gpakosz/.tmux" "${HOME}/.tmux"
+dotfiles_link "${HOME}/.tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
 # zplug
-dotfiles_log "--> zplug"
-dotfiles_gh "zplug/zplug" "${HOME}/.zplug"
+dotfiles_print "--> zplug"
+dotfiles_git "https://github.com/zplug/zplug" "${HOME}/.zplug"
 
 # pyenv
-dotfiles_log "--> pyenv"
-dotfiles_gh "yyuu/pyenv" "${HOME}/.pyenv"
-dotfiles_gh "yyuu/pyenv-virtualenv" "${HOME}/.pyenv/plugins/pyenv-virtualenv"
+dotfiles_print "--> pyenv"
+dotfiles_git "https://github.com/yyuu/pyenv" "${HOME}/.pyenv"
+dotfiles_git "https://github.com/yyuu/pyenv-virtualenv" "${HOME}/.pyenv/plugins/pyenv-virtualenv"
 
 # rbenv
-dotfiles_log "--> rbenv"
-dotfiles_gh "rbenv/rbenv" "${HOME}/.rbenv"
-dotfiles_gh "rbenv/ruby-build" "${HOME}/.rbenv/plugins/ruby-build"
+dotfiles_print "--> rbenv"
+dotfiles_git "https://github.com/rbenv/rbenv" "${HOME}/.rbenv"
+dotfiles_git "https://github.com/rbenv/ruby-build" "${HOME}/.rbenv/plugins/ruby-build"
 
 # nodenv
-dotfiles_log "--> nodenv"
-dotfiles_gh "nodenv/nodenv" "${HOME}/.nodenv"
-dotfiles_gh "nodenv/node-build" "${HOME}/.nodenv/plugins/node-build"
+dotfiles_print "--> nodenv"
+dotfiles_git "https://github.com/nodenv/nodenv" "${HOME}/.nodenv"
+dotfiles_git "https://github.com/nodenv/node-build" "${HOME}/.nodenv/plugins/node-build"
 
 # goenv
-dotfiles_log "--> goenv"
-dotfiles_gh "syndbg/goenv" "${HOME}/.goenv"
+dotfiles_print "--> goenv"
+dotfiles_git "https://github.com/syndbg/goenv" "${HOME}/.goenv"
 
 # system_All
-dotfiles_log "--> system_All"
-dotfiles_link "${repo_path}/dotfiles/system_All"
+dotfiles_print "--> system_All"
+dotfiles_init "${repo_path}/dotfiles/system_All"
 
 # system_$(uname)
-dotfiles_log "--> system_$(uname)"
-dotfiles_link "${repo_path}/dotfiles/system_$(uname)"
+dotfiles_print "--> system_$(uname)"
+dotfiles_init "${repo_path}/dotfiles/system_$(uname)"

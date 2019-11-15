@@ -1,4 +1,5 @@
 asciinema
 httpie
+ipython[notebook]
 pwgen-passphrase
 youtube-dl

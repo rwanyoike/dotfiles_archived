@@ -1,4 +1,5 @@
 [core]
 	excludesfile = ~/.gitignore
+
 [include]
 	path = ~/.gitconfig.user

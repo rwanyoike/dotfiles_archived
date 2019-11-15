@@ -4,6 +4,7 @@ let
     [
       pkgs.aria2
       pkgs.aspell
+      pkgs.aspell-dict-en
       pkgs.bat
       pkgs.cacert # installed with nix
       pkgs.coreutils
@@ -14,7 +15,7 @@ let
       pkgs.fdupes
       pkgs.ffmpeg
       pkgs.figlet
-      pkgs.git
+      pkgs.git-minimal
       pkgs.gnupg
       pkgs.gnused
       pkgs.graphicsmagick
@@ -37,6 +38,7 @@ let
       pkgs.packer
       pkgs.pass
       pkgs.peco
+      pkgs.pinentry
       pkgs.ranger
       pkgs.rclone
       pkgs.reattach-to-user-namespace

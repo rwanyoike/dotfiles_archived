@@ -15,7 +15,7 @@ Clone the repository:
 git clone <REPO_URL> ~/.dotfiles
 ```
 
-And break it down:
+Run `provision.sh`:
 
 ```bash
 bash ~/.dotfiles/provision.sh
@@ -32,32 +32,40 @@ chsh --shell $(which zsh) # ┌(ಠ‿ಠ)┘
 ### All Systems
 
 ```bash
-# (pyenv|rbenv|nodenv|goenv) install x.x.x
-# (pyenv|rbenv|nodenv|goenv) global x.x.x
+# Version management
+(pyenv|rbenv|nodenv|goenv) install --list
+(pyenv|rbenv|nodenv|goenv) install <version>
+(pyenv|rbenv|nodenv|goenv) global <version>
+```
 
-pip install --requirement ~/.packages-python.txt
+```bash
+# Python packages
+pip install --requirement ~/.packages-pip.txt
 
+# Node packages
 # Install https://github.com/yarnpkg/yarn
-xargs yarn global add < ~/.packages-node.txt
+xargs yarn global add < ~/.packages-npm.txt
 ```
 
 ### macOS
 
 ```bash
+# Brew packages
 # Install https://github.com/Homebrew/brew
 brew bundle install --file=~/.packages-brew.txt
 
+# Nix packages
 # Install https://github.com/NixOS/nix
-nix-env --install --file ~/.packages-nixpkgs.nix
+nix-env --install --file ~/.packages-nix.nix
 ```
 
 ### Arch Linux
 
 ```bash
-sudo localectl set-locale en_US.UTF-8
-sudo timedatectl set-ntp true
-
+# Pacman packages
 sudo pacman -S --needed - < ~/.packages-pacman.txt
+
+# AUR packages
 # Install https://aur.archlinux.org/packages/yay
 yay -S - < ~/.packages-aur.txt
 ```

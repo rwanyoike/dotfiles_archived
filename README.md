@@ -31,41 +31,55 @@ chsh --shell $(which zsh) # ┌(ಠ‿ಠ)┘
 
 ### All Systems
 
+#### Version Management
+
 ```bash
-# Version management
 (pyenv|rbenv|nodenv|goenv) install --list
 (pyenv|rbenv|nodenv|goenv) install <version>
 (pyenv|rbenv|nodenv|goenv) global <version>
 ```
 
-```bash
-# Python packages
-pip install --requirement ~/.packages-pip.txt
+#### Python Packages
 
-# Node packages
+```bash
+pip install --user pipx
+xargs -L1 pipx install < ~/.packages/pip.txt
+```
+
+#### Node Packages
+
+```bash
 # Install https://github.com/yarnpkg/yarn
-xargs yarn global add < ~/.packages-npm.txt
+xargs yarn global add < ~/.packages/npm.txt
 ```
 
 ### macOS
 
-```bash
-# Brew packages
-# Install https://github.com/Homebrew/brew
-brew bundle install --file=~/.packages-brew.txt
+#### Brew Packages
 
-# Nix packages
+```bash
+# Install https://github.com/Homebrew/brew
+brew bundle install --file=~/.packages/brew.txt
+```
+
+#### Nix Packages
+
+```bash
 # Install https://github.com/NixOS/nix
-nix-env --install --file ~/.packages-nix.nix
+nix-env --install --file ~/.packages/nix.nix
 ```
 
 ### Arch Linux
 
-```bash
-# Pacman packages
-sudo pacman -S --needed - < ~/.packages-pacman.txt
+#### Pacman Packages
 
-# AUR packages
+```bash
+sudo pacman -S --needed - < ~/.packages/pacman.txt
+```
+
+#### AUR Packages
+
+```bash
 # Install https://aur.archlinux.org/packages/yay
-yay -S - < ~/.packages-aur.txt
+yay -S - < ~/.packages/aur.txt
 ```

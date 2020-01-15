@@ -13,6 +13,7 @@ if [[ -f "${HOME}/.zplug/init.zsh" ]]; then
   source "${HOME}/.zplug/init.zsh"
 
   zplug "zimfw/zimfw", \
+    at:5d66578, \
     hook-build:"ln -sfvn ${ZPLUG_REPOS}/zimfw/zimfw ${HOME}/.zim"
 
   export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "

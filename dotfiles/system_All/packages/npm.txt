@@ -1,4 +1,3 @@
-phantomjs-prebuilt
 tern
 tldr
 vmd

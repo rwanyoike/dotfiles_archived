@@ -59,7 +59,6 @@ This function should only modify configuration layer settings."
      python
      ranger
      react
-     rust
      selectric
      shell
      shell-scripts

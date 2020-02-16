@@ -6,7 +6,7 @@ let
       pkgs.aspell
       pkgs.aspell-dict-en
       pkgs.bat
-      pkgs.cacert # installed with nix
+      pkgs.cacert # installed with nix (nss-cacert)
       pkgs.coreutils
       pkgs.cowsay
       pkgs.exa
@@ -19,10 +19,11 @@ let
       pkgs.gnupg
       pkgs.gnused
       pkgs.graphicsmagick
+      pkgs.graphviz
       pkgs.hexyl
       pkgs.htop
       pkgs.ipcalc
-      pkgs.iperf3
+      pkgs.iperf
       pkgs.jq
       pkgs.jrnl
       pkgs.lolcat
@@ -34,6 +35,7 @@ let
       pkgs.neofetch
       pkgs.nix # installed with nix
       pkgs.nmap
+      pkgs.openssh
       pkgs.p7zip
       pkgs.packer
       pkgs.pass
@@ -44,7 +46,9 @@ let
       pkgs.reattach-to-user-namespace
       pkgs.ripgrep
       pkgs.shellcheck
+      pkgs.speedtest-cli
       pkgs.tmux
+      pkgs.darwin.trash
       pkgs.tree
       pkgs.vim
       pkgs.watch

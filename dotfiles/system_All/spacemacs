@@ -47,7 +47,9 @@ This function should only modify configuration layer settings."
      docker
      emacs-lisp
      emoji
+     finance
      git
+     go
      helm
      html
      javascript

@@ -6,6 +6,7 @@ arch-wiki-docs
 aria2
 aspell-en
 audacity
+base
 bat
 bbswitch-dkms
 bind-tools
@@ -29,18 +30,23 @@ fd
 fdupes
 figlet
 firefox
+fwupd
 gnome-themes-extra
 gramps
 graphicsmagick
+graphviz
 grim
 hexyl
 htop
 imagemagick
 imv
+inetutils
+intel-media-sdk
 intel-ucode
 iotop
 ipcalc
 iperf3
+jdownloader2
 jq
 jre8-openjdk-headless
 keychain
@@ -54,6 +60,7 @@ linux-firmware
 linux-lts
 linux-lts-headers
 linux-tools-meta
+logrotate
 lolcat
 lshw
 lsof
@@ -64,7 +71,6 @@ man-db
 man-pages
 mediainfo
 minicom
-minikube
 mlocate
 modemmanager
 mosh
@@ -94,6 +100,7 @@ qt5ct
 ranger
 rclone
 rofi
+sd
 shellcheck
 slurp
 smartmontools

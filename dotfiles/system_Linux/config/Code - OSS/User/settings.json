@@ -1,0 +1,21 @@
+{
+  "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "Hack, Monospace",
+  "editor.fontLigatures": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderIndentGuides": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
+  "extensions.ignoreRecommendations": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "npm.packageManager": "yarn",
+  "python.pythonPath": "~/.pyenv/versions/sandbox/bin/python",
+  "search.searchOnType": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
+  "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": 0.9
+}

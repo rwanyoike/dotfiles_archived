@@ -97,6 +97,7 @@ progress
 pulseaudio-alsa
 qemu
 qt5ct
+qt5-wayland
 ranger
 rclone
 rofi
@@ -128,6 +129,7 @@ wavemon
 wireguard-dkms
 wireguard-tools
 wireshark-qt
+xdg-user-dirs
 xorg-server-xwayland
 xorg-xev
 yarn

@@ -15,7 +15,8 @@
   "python.pythonPath": "~/.pyenv/versions/sandbox/bin/python",
   "search.searchOnType": false,
   "terminal.external.osxExec": "iTerm.app",
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 0.9,
   "workbench.colorTheme": "Gruvbox Dark (Hard)",
-  "workbench.iconTheme": "vscode-icons",
-  "window.zoomLevel": 0.9
+  "workbench.iconTheme": "vscode-icons"
 }

@@ -122,8 +122,11 @@ bindsym XF86MonBrightnessDown exec light -U 2
 # }}}
 
 # Other Keybindings {{{
-bindsym --release Print exec grim -g \"$(slurp -d)\" - | wl-copy
-bindsym $mod+Print      exec grim - | wl-copy
+bindsym --release {
+  Print            exec /usr/share/sway/scripts/grimshot copy area
+  $mod+Print       exec /usr/share/sway/scripts/grimshot copy screen
+  $mod+Shift+Print exec /usr/share/sway/scripts/grimshot copy win
+}
 bindsym $mod+Shift+v    exec clipman pick -t rofi
 # }}}
 
@@ -146,21 +149,20 @@ gaps outer 0
 # }}}
 
 # Autostart {{{
-exec_always {
-  dconf write /org/gtk/settings/file-chooser/sort-directories-first true
-}
+exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first true
 
-exec {
-  mako
-  redshift
-  swayidle -w \
-    timeout 300 'swaylock -f -c 1d2021' \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 1d2021'
-  wl-paste -t text --watch clipman store
-}
+exec mako
+exec redshift
+exec swayidle -w \
+  timeout 300  'swaylock -f -c 1d2021' \
+  timeout 600  'swaymsg "output * dpms off"' \
+  resume       'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 1d2021'
+exec wl-paste -t text --watch clipman store
 # }}}
+
+# See: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
+for_window [shell=".*"] title_format "%title :: %shell"
 
 bar {
   status_command i3status-rs ~/.config/sway/status.toml
@@ -173,11 +175,11 @@ bar {
     statusline $base04
 
     # class │ border │ background │ text
-    focused_workspace   $base05 $base0D $base00
-    active_workspace    $base05 $base03 $base00
-    inactive_workspace  $base03 $base01 $base05
-    urgent_workspace    $base08 $base08 $base00
-    binding_mode        $base00 $base0A $base00
+    focused_workspace  $base05 $base0D $base00
+    active_workspace   $base05 $base03 $base00
+    inactive_workspace $base03 $base01 $base05
+    urgent_workspace   $base08 $base08 $base00
+    binding_mode       $base00 $base0A $base00
   }
 }
 

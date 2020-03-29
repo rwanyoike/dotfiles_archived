@@ -8,17 +8,18 @@ name = "awesome"
 # cpu = " \uF3FD "
 
 [[block]]
+block = "pomodoro"
+
+[[block]]
 block = "backlight"
 
 [[block]]
 block = "temperature"
 interval = 5
-collapsed = false
 
 [[block]]
 block = "memory"
 interval = 5
-display_type = "memory"
 format_mem = "{Mup}%"
 format_swap = "{SUp}%"
 
@@ -43,4 +44,4 @@ format = "{percentage}% ({power}W)"
 
 [[block]]
 block = "time"
-interval = 60
+interval = 5

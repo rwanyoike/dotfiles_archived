@@ -1,5 +1,10 @@
 # See: https://github.com/gpakosz/.tmux
 
+# -- general -------------------------------------------------------------------
+
+# Boost history (1024 * 256)
+set -g history-limit 262144
+
 # -- user customizations ------------------------------------------------------
 
 # Replace C-a by C-b instead of using both prefixes

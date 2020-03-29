@@ -27,7 +27,7 @@ function dotfiles_exec() {
 # ${2}: dest
 # ${3}: version
 function dotfiles_git() {
-  if [[ ! -d "${2}" ]]; then
+  if [[ ! -d ${2} ]]; then
     dotfiles_exec git clone "${1}" "${2}"
   fi
 
@@ -40,14 +40,14 @@ function dotfiles_git() {
 # ${1}: source
 # ${2}: dest
 function dotfiles_link() {
-  if [[ ! -h "${2}" ]]; then
+  if [[ ! -h ${2} ]]; then
     dotfiles_exec ln -s "${1}" "${2}"
   fi
 }
 
 # ${1}: path
 function dotfiles_mkdir() {
-  if [[ ! -d "${1}" ]]; then
+  if [[ ! -d ${1} ]]; then
     dotfiles_exec mkdir -p "${1}"
   fi
 }

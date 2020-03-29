@@ -20,10 +20,12 @@ cowsay
 deadbeef
 dialog
 dmidecode
+dnscrypt-proxy
 dnsmasq
 docker-compose
 ebtables
 emacs
+evince
 exa
 exfat-utils
 fd
@@ -47,7 +49,6 @@ iotop
 ipcalc
 iperf3
 jdownloader2
-jq
 jre8-openjdk-headless
 keychain
 kitty
@@ -78,6 +79,7 @@ mpv
 mtr
 ncdu
 neofetch
+nerd-fonts-jetbrains-mono
 netdata
 networkmanager
 nfs-utils
@@ -85,19 +87,16 @@ nmap
 noto-fonts-cjk
 obs-studio
 p7zip
-packer
 pacutils
 pass
 pavucontrol
 perl-rename
-podman
 postgresql-libs
 powertop
 progress
 pulseaudio-alsa
 qemu
 qt5ct
-qt5-wayland
 ranger
 rclone
 rofi
@@ -110,8 +109,10 @@ sshfs
 sway
 swayidle
 swaylock
+syncthing
 sysstat
 systemd-swap
+tcpdump
 terminus-font
 testdisk
 tlp
@@ -133,5 +134,5 @@ xdg-user-dirs
 xorg-server-xwayland
 xorg-xev
 yarn
-zeal
+yq
 zsh

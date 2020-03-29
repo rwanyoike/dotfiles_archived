@@ -52,6 +52,7 @@ let
       pkgs.tree
       pkgs.vim
       pkgs.watch
+      pkgs.wireguard-go
       pkgs.wireguard-tools
       pkgs.yarn
     ];

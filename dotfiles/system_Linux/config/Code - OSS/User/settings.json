@@ -1,6 +1,6 @@
 {
   "editor.emptySelectionClipboard": false,
-  "editor.fontFamily": "Hack, Monospace",
+  "editor.fontFamily": "Monospace",
   "editor.fontLigatures": true,
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,

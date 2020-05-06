@@ -15,6 +15,7 @@ bluez-utils
 bookworm
 breeze
 chromium
+clinfo
 code
 cowsay
 deadbeef
@@ -24,6 +25,7 @@ dnscrypt-proxy
 dnsmasq
 docker-compose
 ebtables
+edk2-ovmf
 emacs
 evince
 exa
@@ -43,6 +45,7 @@ htop
 imagemagick
 imv
 inetutils
+intel-compute-runtime
 intel-media-sdk
 intel-ucode
 iotop

@@ -1,3 +1,4 @@
+authy
 clipman
 downgrade
 i3status-rust-git

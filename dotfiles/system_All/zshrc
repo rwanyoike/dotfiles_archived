@@ -1,15 +1,19 @@
 # See: https://github.com/NixOS/nix
-if [[ -f "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]]; then
+if [[ -f ${HOME}/.nix-profile/etc/profile.d/nix.sh ]]; then
   source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
 fi
 
 # See: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
-if [[ "${TERM}" =~ ^(dumb|linux)$ ]]; then
+if [[ ${TERM} =~ ^(dumb|linux|tramp)$ ]]; then
   PS1="$ "
+  if [[ ${TERM} == tramp ]]; then
+    unsetopt zle
+    return;
+  fi
 fi
 
 # See: https://github.com/zplug/zplug
-if [[ -f "${HOME}/.zplug/init.zsh" ]]; then
+if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   source "${HOME}/.zplug/init.zsh"
 
   zplug "zimfw/zimfw", \

@@ -158,7 +158,7 @@ exec swayidle -w \
   timeout 600  'swaymsg "output * dpms off"' \
   resume       'swaymsg "output * dpms on"' \
   before-sleep 'swaylock -f -c 1d2021'
-exec wl-paste -t text --watch clipman store
+exec wl-paste -t text -w clipman --notify store --max-items 30
 # }}}
 
 # See: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland

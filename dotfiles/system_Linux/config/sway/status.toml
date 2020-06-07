@@ -2,13 +2,12 @@
 name = "gruvbox-dark"
 
 [icons]
-name = "awesome"
+name = "awesome5"
 
-# [icons.overrides]
-# cpu = " \uF3FD "
 
 [[block]]
-block = "pomodoro"
+block = "music"
+buttons = ["play", "next"]
 
 [[block]]
 block = "backlight"

@@ -1,11 +1,14 @@
-authy
+authy-snap
 clipman
 downgrade
 i3status-rust-git
+console-blanking
 kind-bin
+peco-bin
 pqiv
+qgnomeplatform
 redshift-wlr-gamma-control-git
 refind-theme-ambience-black-git
-ttf-font-awesome-4
+tailscale
 yay-bin
 zeal

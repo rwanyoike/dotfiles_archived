@@ -5,7 +5,7 @@ include ~/.config/sway/colorscheme
 # Variables {{{
 set $mod  Mod4
 set $font Monospace 12
-set $menu rofi -sidebar-mode -show-icons -modi "window,run,drun" -show run
+set $menu rofi -show run
 set $term kitty
 
 set $ws1 "01 "
@@ -127,7 +127,8 @@ bindsym --release {
   $mod+Print       exec /usr/share/sway/scripts/grimshot copy screen
   $mod+Shift+Print exec /usr/share/sway/scripts/grimshot copy win
 }
-bindsym $mod+Shift+v    exec clipman pick -t rofi
+bindsym $mod+Shift+v       exec clipman pick -t rofi
+bindsym Ctrl+Shift+Delete  exec swaylock
 # }}}
 
 # Colors and Customization {{{
@@ -151,14 +152,15 @@ gaps outer 0
 # Autostart {{{
 exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first true
 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec redshift
 exec swayidle -w \
-  timeout 300  'swaylock -f -c 1d2021' \
-  timeout 600  'swaymsg "output * dpms off"' \
+  timeout 300  'swaylock -f' \
+  timeout 360  'swaymsg "output * dpms off"' \
   resume       'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 1d2021'
-exec wl-paste -t text -w clipman --notify store --max-items 30
+  before-sleep 'swaylock -f'
+exec wl-paste -t text -w clipman --notify store --max-items 50
 # }}}
 
 # See: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland

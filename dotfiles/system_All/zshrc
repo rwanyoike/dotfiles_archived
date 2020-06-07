@@ -1,30 +1,42 @@
-# See: https://github.com/NixOS/nix
-if [[ -f ${HOME}/.nix-profile/etc/profile.d/nix.sh ]]; then
-  source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
+# See: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+if [[ ${TERM} == tramp ]]; then
+  PS1="$ "
+  unsetopt zle
+  return
 fi
 
-# See: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
-if [[ ${TERM} =~ ^(dumb|linux|tramp)$ ]]; then
-  PS1="$ "
-  if [[ ${TERM} == tramp ]]; then
-    unsetopt zle
-    return;
-  fi
-fi
+# Use emacs key bindings
+bindkey -e
 
 # See: https://github.com/zplug/zplug
 if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   source "${HOME}/.zplug/init.zsh"
 
-  zplug "zimfw/zimfw", \
-    at:5d66578, \
-    hook-build:"ln -sfvn ${ZPLUG_REPOS}/zimfw/zimfw ${HOME}/.zim"
-
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets line)
   export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
-  zplug "djui/alias-tips"
 
-  zplug "${HOME}/.zsh", \
-    from:local
+  if [[ ! ${TERM} =~ ^(dumb|linux)$ ]]; then
+    zplug romkatv/powerlevel10k, as:theme
+  fi
+
+  zplug zimfw/environment
+  zplug zimfw/git
+  zplug zimfw/input
+  zplug zimfw/termtitle
+  zplug zimfw/utility
+
+  zplug zsh-users/zsh-autosuggestions
+  zplug zsh-users/zsh-completions
+  # zsh-history-substring-search must be loaded after zsh-syntax-highlighting
+  zplug zsh-users/zsh-history-substring-search, defer:3
+  # zsh-syntax-highlighting must be loaded after executing compinit command
+  zplug zsh-users/zsh-syntax-highlighting, defer:2
+
+  # zplug b4b4r07/emoji-cli
+  zplug djui/alias-tips
+  zplug agkozak/zsh-z
+
+  zplug "${HOME}/.zsh", from:local
 
   if ! zplug check --verbose; then
     printf "Install Zsh plugins? [y/N]: "
@@ -34,4 +46,12 @@ if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   fi
 
   zplug load
+
+  # Bind zsh-history-substring-search shortcuts
+  bindkey "${terminfo[kcuu1]}" history-substring-search-up
+  bindkey "${terminfo[kcud1]}" history-substring-search-down
+
+  if [[ ! ${TERM} =~ ^(dumb|linux)$ ]]; then
+    source "${HOME}/.p10k.zsh"
+  fi
 fi

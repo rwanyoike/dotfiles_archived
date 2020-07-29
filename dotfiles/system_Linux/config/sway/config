@@ -6,7 +6,7 @@ include ~/.config/sway/colorscheme
 set $mod  Mod4
 set $font Monospace 12
 set $menu rofi -show run
-set $term kitty
+set $term alacritty
 
 set $ws1 "01 "
 set $ws2 "02 "
@@ -154,7 +154,7 @@ exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first tr
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec redshift
+exec gammastep
 exec swayidle -w \
   timeout 300  'swaylock -f' \
   timeout 360  'swaymsg "output * dpms off"' \

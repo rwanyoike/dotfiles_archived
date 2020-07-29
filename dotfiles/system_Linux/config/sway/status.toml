@@ -4,7 +4,6 @@ name = "gruvbox-dark"
 [icons]
 name = "awesome5"
 
-
 [[block]]
 block = "music"
 buttons = ["play", "next"]
@@ -25,6 +24,12 @@ format_swap = "{SUp}%"
 [[block]]
 block = "cpu"
 interval = 2
+
+[[block]]
+block = "custom"
+command = ''' echo "{\"icon\":\"net_vpn\",\"state\":\"Info\",\"text\":\"$(curl -sS -m5 https://am.i.mullvad.net/country)\"}" '''
+json = true
+interval = 600
 
 [[block]]
 block = "net"

@@ -5,3 +5,4 @@ height=200
 border-color=#ebdbb2
 background-color=#1d2021
 text-color=#ebdbb2
+group-by=app-name,summary

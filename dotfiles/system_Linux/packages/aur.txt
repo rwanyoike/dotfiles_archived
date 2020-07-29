@@ -3,11 +3,11 @@ clipman
 downgrade
 i3status-rust-git
 console-blanking
+gammastep
 kind-bin
 peco-bin
 pqiv
 qgnomeplatform
-redshift-wlr-gamma-control-git
 refind-theme-ambience-black-git
 tailscale
 yay-bin

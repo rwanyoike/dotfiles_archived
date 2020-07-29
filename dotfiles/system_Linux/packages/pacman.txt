@@ -1,3 +1,4 @@
+alacritty
 alsa-utils
 android-tools
 android-udev
@@ -10,7 +11,7 @@ base
 bat
 bbswitch-dkms
 beancount
-bind-tools
+bind
 blueberry
 bluez-utils
 bookworm
@@ -38,6 +39,7 @@ firefox
 firewalld
 fwupd
 gnome-themes-extra
+gopass
 gramps
 graphicsmagick
 graphviz
@@ -50,14 +52,15 @@ inetutils
 intel-compute-runtime
 intel-media-sdk
 intel-ucode
+intel-undervolt
 iotop
 ipcalc
 iperf3
 jdownloader2
 jre8-openjdk-headless
 keychain
-kitty
 kubectl
+kubectx
 kvantum-qt5
 libreoffice-fresh
 libva-intel-driver
@@ -94,12 +97,11 @@ noto-fonts-cjk
 obs-studio
 p7zip
 pacutils
-pass
 pavucontrol
 perl-image-exiftool
 perl-rename
-postgresql-libs
 polkit-gnome
+postgresql-libs
 powertop
 progress
 pulseaudio-alsa
@@ -139,6 +141,7 @@ vinagre
 virt-manager
 virtualbox
 wavemon
+wf-recorder
 wireguard-dkms
 wireguard-tools
 wireshark-qt

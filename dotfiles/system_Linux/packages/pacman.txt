@@ -38,6 +38,8 @@ figlet
 firefox
 firewalld
 fwupd
+gammastep
+gdb
 gnome-themes-extra
 gopass
 gramps
@@ -103,6 +105,7 @@ perl-rename
 polkit-gnome
 postgresql-libs
 powertop
+pqiv
 progress
 pulseaudio-alsa
 qemu
@@ -110,6 +113,7 @@ ranger
 rclone
 rofi
 sd
+seahorse
 shellcheck
 slurp
 smartmontools
@@ -126,11 +130,13 @@ systemd-swap
 tcpdump
 terminus-font
 testdisk
+texlive-core
 thunar
 tlp
 tmux
 transmission-cli
 trash-cli
+tree
 ttf-font-awesome
 ttf-hack
 ttf-jetbrains-mono

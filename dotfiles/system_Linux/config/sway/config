@@ -200,5 +200,7 @@ input * {
 }
 
 for_window [shell=".*"] inhibit_idle fullscreen
+for_window [title="Firefox - Sharing Indicator"] floating enable
+for_window [title="Launch Application"] floating enable
 
 include ~/.config/sway/hosts/`hostname`

@@ -3,10 +3,14 @@ clipman
 downgrade
 i3status-rust-git
 console-blanking
+emacs-pgtk-native-comp-git
+k3s-bin
 kind-bin
 peco-bin
 qgnomeplatform
+rancher-k3d-bin
 refind-theme-ambience-black-git
-tailscale
+srb2kart
+tailscale-bin
 yay-bin
 zeal

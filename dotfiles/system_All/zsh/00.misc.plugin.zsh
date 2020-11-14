@@ -12,3 +12,6 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 # See: https://wiki.archlinux.org/index.php/Environment_variables
 export VISUAL=vim
 export EDITOR="${VISUAL}"
+
+# Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
+export vblank_mode=0

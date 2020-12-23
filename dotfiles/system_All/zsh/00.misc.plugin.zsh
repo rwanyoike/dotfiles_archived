@@ -1,6 +1,6 @@
 # See: http://zsh.sourceforge.net/Doc/Release/Parameters.html
 #      http://zsh.sourceforge.net/Doc/Release/Options.html
-export HISTSIZE=50000
+export HISTSIZE=90000
 export SAVEHIST="${HISTSIZE}"
 export HISTFILE="${HOME}/Sync/zhistory"
 

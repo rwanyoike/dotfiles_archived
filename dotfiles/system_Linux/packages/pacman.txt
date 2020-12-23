@@ -154,8 +154,8 @@ wireshark-qt
 wpa_supplicant
 xdg-user-dirs
 xorg-server-xephyr
-xorg-server-xwayland
 xorg-xev
+xorg-xwayland
 yarn
 yq
 zsh

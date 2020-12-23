@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o nounset
+set -euo pipefail
 
 repo_path="$(cd "${BASH_SOURCE[0]%/*}" && pwd)"
 
@@ -20,7 +19,7 @@ function dotfiles_print() {
 # ${1}: cmd
 function dotfiles_exec() {
   printf "${ui_003}$ %s${ui_sgr0}\n" "${*}"
-  ${@}
+  "${@}"
 }
 
 # ${1}: repo

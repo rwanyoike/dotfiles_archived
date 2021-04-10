@@ -18,5 +18,8 @@
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 0.9,
   "workbench.colorTheme": "Gruvbox Dark (Hard)",
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "shellcheck.customArgs": [
+    "-x"
+  ]
 }

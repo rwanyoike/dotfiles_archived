@@ -127,6 +127,7 @@ bindsym --release {
   $mod+Print       exec /usr/share/sway/scripts/grimshot copy screen
   $mod+Shift+Print exec /usr/share/sway/scripts/grimshot copy win
 }
+bindsym $mod+c             exec rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
 bindsym $mod+Shift+v       exec clipman pick -t rofi
 bindsym Ctrl+Shift+Delete  exec swaylock
 # }}}

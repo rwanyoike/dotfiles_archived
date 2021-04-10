@@ -6,7 +6,6 @@ window:
     y: 10
 
 scrolling:
-  # history: 262144  # 1024 * 256
   history: 0
 
 font:
@@ -46,4 +45,5 @@ mouse:
     modifiers: "Control|Shift"
 
 mouse_bindings:
- - { mouse: "Middle", action: "None" }
+ - mouse: "Middle"
+   action: "None"

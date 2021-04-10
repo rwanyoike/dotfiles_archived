@@ -43,7 +43,6 @@ gdb
 gnome-themes-extra
 gopass
 gramps
-graphicsmagick
 graphviz
 grim
 hexyl
@@ -51,6 +50,7 @@ htop
 imagemagick
 imv
 inetutils
+inkscape
 intel-compute-runtime
 intel-media-sdk
 intel-ucode
@@ -77,6 +77,7 @@ lolcat
 lshw
 lsof
 lxappearance
+lynx
 macchanger
 mako
 man-db
@@ -111,10 +112,11 @@ pulseaudio-alsa
 qemu
 ranger
 rclone
-rofi
+rofi-calc
 sd
 seahorse
 shellcheck
+simple-scan
 slurp
 smartmontools
 speedtest-cli
@@ -127,6 +129,7 @@ syncthing
 sysstat
 systemd-resolvconf
 systemd-swap
+tailscale
 tcpdump
 terminus-font
 testdisk

@@ -18,8 +18,8 @@ interval = 5
 [[block]]
 block = "memory"
 interval = 5
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "cpu"
@@ -27,7 +27,7 @@ interval = 2
 
 [[block]]
 block = "custom"
-command = ''' echo "{\"icon\":\"net_vpn\",\"state\":\"Info\",\"text\":\"$(curl -sS -m5 https://am.i.mullvad.net/country)\"}" '''
+command = ''' echo "{\"icon\":\"net_vpn\",\"state\":\"Info\",\"text\":\"$(curl -sS -m5 -f https://am.i.mullvad.net/country || echo -1)\"}" '''
 json = true
 interval = 600
 
@@ -44,7 +44,7 @@ driver = "alsa"
 block = "battery"
 interval = 10
 driver = "upower"
-format = "{percentage}% ({power}W)"
+format = "{percentage} ({power})"
 
 [[block]]
 block = "time"

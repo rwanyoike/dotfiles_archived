@@ -1,4 +1,2 @@
 tern
 tldr
-vmd
-vtop

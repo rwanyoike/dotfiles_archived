@@ -1,5 +1,5 @@
 font=Monospace 10
-border-size=6
+layer=overlay
 width=500
 height=200
 border-color=#ebdbb2

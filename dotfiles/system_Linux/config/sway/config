@@ -152,16 +152,6 @@ gaps outer 0
 
 # Autostart {{{
 exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first true
-
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec mako
-exec gammastep
-exec swayidle -w \
-  timeout 300  'swaylock -f' \
-  timeout 360  'swaymsg "output * dpms off"' \
-  resume       'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f'
-exec wl-paste -t text -w clipman --notify store --max-items 50
 # }}}
 
 # Ref: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
@@ -205,3 +195,7 @@ for_window [title="Firefox - Sharing Indicator"] floating enable
 for_window [title="Launch Application"] floating enable
 
 include ~/.config/sway/hosts/`hostname`
+# Set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
+include /etc/sway/config.d/*
+
+exec systemctl --user start sway-session.target

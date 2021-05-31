@@ -1,4 +1,4 @@
-# See: https://github.com/swaywm/sway/wiki
+# Ref: https://github.com/swaywm/sway/wiki
 
 if [[ $(tty) == /dev/tty1 ]]; then
   echo Starting Sway...

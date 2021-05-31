@@ -1,4 +1,4 @@
-# See: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+# Ref: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
 if [[ ${TERM} == tramp ]]; then
   PS1="$ "
   unsetopt zle
@@ -8,7 +8,7 @@ fi
 # Use emacs key bindings
 bindkey -e
 
-# See: https://github.com/zplug/zplug
+# Ref: https://github.com/zplug/zplug
 if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   source "${HOME}/.zplug/init.zsh"
 

@@ -1,4 +1,4 @@
-# See: https://github.com/ogham/exa
+# Ref: https://github.com/ogham/exa
 
 if command -v exa &> /dev/null; then
   alias ls="exa --group-directories-first"

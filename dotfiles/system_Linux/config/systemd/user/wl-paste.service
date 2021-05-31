@@ -1,0 +1,11 @@
+[Unit]
+Description=Wayland copy and paste command line utilities
+Documentation=man:wl-paste(1)
+BindsTo=sway-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+ExecStart=/usr/bin/wl-paste -t text -w clipman --notify store --max-items 50
+
+[Install]
+WantedBy=sway-session.target

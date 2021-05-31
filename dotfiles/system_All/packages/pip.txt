@@ -1,7 +1,6 @@
 asciinema
 hachoir[urwid]
 httpie
-ipython[notebook]
 pwgen-passphrase
 scapy[basic]
 youtube-dl

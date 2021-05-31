@@ -76,7 +76,6 @@ logrotate
 lolcat
 lshw
 lsof
-lxappearance
 lynx
 macchanger
 mako
@@ -151,7 +150,6 @@ virt-manager
 virtualbox
 wavemon
 wf-recorder
-wireguard-dkms
 wireguard-tools
 wireshark-qt
 wpa_supplicant

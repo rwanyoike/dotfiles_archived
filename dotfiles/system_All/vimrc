@@ -1,4 +1,4 @@
-" See: https://github.com/amix/vimrc
+" Ref: https://github.com/amix/vimrc
 
 set runtimepath+=~/.vim_runtime
 

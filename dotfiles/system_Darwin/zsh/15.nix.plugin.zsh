@@ -1,4 +1,4 @@
-# See: https://github.com/NixOS/nix
+# Ref: https://github.com/NixOS/nix
 
 if [[ -f ${HOME}/.nix-profile/etc/profile.d/nix.sh ]]; then
   source "${HOME}/.nix-profile/etc/profile.d/nix.sh"

@@ -164,12 +164,12 @@ exec swayidle -w \
 exec wl-paste -t text -w clipman --notify store --max-items 50
 # }}}
 
-# See: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
+# Ref: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
 for_window [shell=".*"] title_format "%title :: %shell"
 
 bar {
   status_command i3status-rs ~/.config/sway/status.toml
-  height 29
+  height 30
 
   colors {
     # Ref: https://github.com/rkubosz/base16-sway

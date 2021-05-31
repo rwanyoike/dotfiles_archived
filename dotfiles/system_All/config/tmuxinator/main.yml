@@ -1,0 +1,8 @@
+---
+
+name: "main"
+root: "~/"
+startup_window: 2
+windows:
+  - journalctl: "journalctl -b -f -p err"
+  - ~: ~ 

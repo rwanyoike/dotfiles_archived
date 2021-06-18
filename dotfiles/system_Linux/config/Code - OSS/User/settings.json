@@ -21,5 +21,6 @@
   "workbench.iconTheme": "vscode-icons",
   "shellcheck.customArgs": [
     "-x"
-  ]
+  ],
+  "docker.showStartPage": false
 }

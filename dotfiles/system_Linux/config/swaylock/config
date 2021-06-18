@@ -6,7 +6,7 @@ show-failed-attempts
 indicator-radius=100
 indicator-thickness=25
 
-image=~/Pictures/swaylock5.jpg
+image=~/Pictures/swaylock.png
 
 color=000000
 font=Monospace

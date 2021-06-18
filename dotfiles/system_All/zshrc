@@ -5,15 +5,9 @@ if [[ ${TERM} == tramp ]]; then
   return
 fi
 
-# Use emacs key bindings
-bindkey -e
-
 # Ref: https://github.com/zplug/zplug
 if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   source "${HOME}/.zplug/init.zsh"
-
-  export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets line)
-  export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
 
   if [[ ! ${TERM} =~ ^(dumb|linux)$ ]]; then
     zplug romkatv/powerlevel10k, as:theme
@@ -32,7 +26,6 @@ if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   # zsh-syntax-highlighting must be loaded after executing compinit command
   zplug zsh-users/zsh-syntax-highlighting, defer:2
 
-  # zplug b4b4r07/emoji-cli
   zplug djui/alias-tips
   zplug agkozak/zsh-z
 
@@ -46,10 +39,6 @@ if [[ -f ${HOME}/.zplug/init.zsh ]]; then
   fi
 
   zplug load
-
-  # Bind zsh-history-substring-search shortcuts
-  bindkey "${terminfo[kcuu1]}" history-substring-search-up
-  bindkey "${terminfo[kcud1]}" history-substring-search-down
 
   if [[ ! ${TERM} =~ ^(dumb|linux)$ ]]; then
     source "${HOME}/.p10k.zsh"

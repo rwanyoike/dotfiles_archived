@@ -1,6 +1,6 @@
 # Ref: https://github.com/swaywm/sway/wiki
 
 if [[ $(tty) == /dev/tty1 ]]; then
-  echo Starting Sway...
-  (exec sway)
+  echo "Starting Sway..."
+  (exec systemd-cat --identifier=sway sway)
 fi
